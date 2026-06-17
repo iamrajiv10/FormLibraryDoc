@@ -2,6 +2,7 @@ export const sidebarConfig = [
   {
     title: 'Getting Started',
     items: [
+      { label: 'Overview', path: '/overview'},
       { label: 'Installation', path: '/installation' },
       { label: 'Quick Start', path: '/quick-start' },
     ],
@@ -9,9 +10,17 @@ export const sidebarConfig = [
   {
     title: 'Components',
     items: [
-      { label: 'Text Field', path: '/components/text-field' },
-      { label: 'Email Field', path: '/components/email-field' },
-      { label: 'Password Field', path: '/components/password-field' },
+      { label: 'Static Form', path: '/components/static-form' },
+      { label: 'Conditional Form', path: '/components/conditional-form' },
+    ],
+  },
+  {
+    title: 'Fields',
+    items: [
+      { label: 'Text Field', path: '/fields/text-field' },
+      { label: 'Text Field Page', path: 'fields/text-field-Page' },
+      { label: 'Email Field', path: '/fields/email-field' },
+      { label: 'Password Field', path: '/fields/password-field' },
     ],
   },
   {

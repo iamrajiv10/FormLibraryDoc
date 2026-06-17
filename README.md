@@ -14,3 +14,65 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+
+Getting Started
+
+Components
+├─ Form
+├─ ConditionalForm
+
+Fields
+├─ Text Field
+├─ Email Field
+├─ Password Field
+├─ Number Field
+├─ Date Field
+├─ Select
+├─ Radio Group
+├─ Checkbox
+├─ Checkbox Group
+├─ Textarea
+
+Features
+├─ Validation
+├─ Grid Layout
+├─ Conditional Rendering
+├─ Repeatable Group
+├─ Initial Values
+├─ Disabled Fields
+├─ Custom Buttons
+├─ Global Styling
+├─ Field Styling
+
+Examples
+├─ Registration Form
+├─ Education Form
+├─ Multi Step Form
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+Getting Started
+Components
+Fields
+Advanced Features
+Examples
+
+//////////////////////////////////////////
+Fields
+├─ Text Field
+├─ Email Field
+├─ Password Field
+├─ Number Field
+├─ Date Field
+├─ Textarea
+├─ Radio Group
+├─ Checkbox
+├─ Checkbox Group
+└─ Select
+
+url and multiSelect to be added .

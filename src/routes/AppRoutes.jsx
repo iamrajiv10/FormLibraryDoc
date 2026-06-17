@@ -3,12 +3,14 @@ import { Routes, Route } from 'react-router-dom';
 import DocsLayout from '../layouts/DocsLayout';
 
 // Pages
+import Overview from '../pages/GettingStarted/OverView';
 import Installation from '../pages/GettingStarted/Installation';
-import QuickStart from '../pages/GettingStarted/QuickStart';
 
-import TextFieldDoc from '../pages/Components/TextField';
-import EmailFieldDoc from '../pages/Components/EmailField';
-import PasswordFieldDoc from '../pages/Components/PasswordField';
+import FormComponent from '../pages/Component/Form';
+
+import TextFieldDoc from '../pages/Fields/TextField';
+import EmailFieldDoc from '../pages/Fields/EmailField';
+import PasswordFieldDoc from '../pages/Fields/PasswordField';
 
 import ConditionalFormDoc from '../pages/Features/ConditionalForm';
 import RepeatableGroupDoc from '../pages/Features/RepeatableGroup';
@@ -16,22 +18,31 @@ import GridSystemDoc from '../pages/Features/GridSystem';
 
 import RegistrationFormDoc from '../pages/Examples/RegistrationForm';
 import EducationFormDoc from '../pages/Examples/EducationForm';
+import QuickStart from '../pages/GettingStarted/QuickStart';
+import ConditionalFormPage from '../pages/Component/ConditionalForm';
+import TextFieldPage from '../pages/Fields/TaxtField';
 
 const AppRoutes = ({ toggleTheme, mode }) => {
   return (
     <Routes>
       <Route path="/" element={<DocsLayout toggleTheme={toggleTheme} mode={mode} />}>
         {/* Default route */}
-        <Route index element={<Installation />} />
-        
+        <Route index element={<Overview />} />
+
         {/* Getting Started */}
+        <Route path="overview" element={<Overview />} />
         <Route path="installation" element={<Installation />} />
         <Route path="quick-start" element={<QuickStart />} />
 
         {/* Components */}
-        <Route path="components/text-field" element={<TextFieldDoc />} />
-        <Route path="components/email-field" element={<EmailFieldDoc />} />
-        <Route path="components/password-field" element={<PasswordFieldDoc />} />
+        <Route path="components/static-form" element={<FormComponent />} />
+        <Route path="components/conditional-form" element={<ConditionalFormPage />} />
+
+        {/* Fields */}
+        <Route path="fields/text-field-Page" element={<TextFieldPage />} />
+        <Route path="fields/text-field" element={<TextFieldDoc />} />
+        <Route path="fields/email-field" element={<EmailFieldDoc />} />
+        <Route path="fields/password-field" element={<PasswordFieldDoc />} />
 
         {/* Features */}
         <Route path="features/conditional-form" element={<ConditionalFormDoc />} />
