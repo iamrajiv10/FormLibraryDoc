@@ -21,6 +21,8 @@ export const sidebarConfig = [
       { label: 'Text Field Page', path: 'fields/text-field-Page' },
       { label: 'Email Field', path: '/fields/email-field' },
       { label: 'Password Field', path: '/fields/password-field' },
+      { label: 'Number Field', path: '/fields/number-field' },
+      { label: 'Date Field', path: '/fields/date-field' },
     ],
   },
   {

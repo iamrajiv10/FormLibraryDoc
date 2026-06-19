@@ -21,6 +21,10 @@ import EducationFormDoc from '../pages/Examples/EducationForm';
 import QuickStart from '../pages/GettingStarted/QuickStart';
 import ConditionalFormPage from '../pages/Component/ConditionalForm';
 import TextFieldPage from '../pages/Fields/TaxtField';
+import EmailFieldPage from '../pages/Fields/EmailField';
+import PasswordFieldPage from '../pages/Fields/PasswordField';
+import NumberField from '../pages/Fields/NumberField';
+import DateFieldPage from '../pages/Fields/DateField';
 
 const AppRoutes = ({ toggleTheme, mode }) => {
   return (
@@ -41,8 +45,10 @@ const AppRoutes = ({ toggleTheme, mode }) => {
         {/* Fields */}
         <Route path="fields/text-field-Page" element={<TextFieldPage />} />
         <Route path="fields/text-field" element={<TextFieldDoc />} />
-        <Route path="fields/email-field" element={<EmailFieldDoc />} />
-        <Route path="fields/password-field" element={<PasswordFieldDoc />} />
+        <Route path="fields/email-field" element={<EmailFieldPage />} />
+        <Route path="fields/password-field" element={<PasswordFieldPage />} />
+        <Route path="fields/number-field" element={<NumberField />} />
+        <Route path="fields/date-field" element={<DateFieldPage />} />
 
         {/* Features */}
         <Route path="features/conditional-form" element={<ConditionalFormDoc />} />

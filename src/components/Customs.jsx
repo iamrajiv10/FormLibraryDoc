@@ -19,6 +19,9 @@ import {
   Typography
 } from '@mui/material';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import { Form } from 'formLibrary';
+import LivePreview from './LivePreview/LivePreview';
+import CodeBlock from './CodeBlock/CodeBlock';
 
 /* ==========================================
    PAGE HEADER
@@ -131,11 +134,12 @@ export const BulletList = ({ items = [] }) => (
         </ListItemIcon>
 
         <ListItemText
-          primary={item}
-          primaryTypographyProps={{
-            lineHeight: 1.8
-          }}
-        />
+  primary={
+    <Typography sx={{ lineHeight: 1.8 }}>
+      {item}
+    </Typography>
+  }
+/>
       </ListItem>
     ))}
   </List>
@@ -478,7 +482,6 @@ export const CodeSection = ({
   snippet,
   fullCode,
   language = 'jsx',
-  CodeBlock
 }) => (
   <Box sx={{ mb: 5 }}>
     <Typography
@@ -508,5 +511,159 @@ export const CodeSection = ({
       snippet={snippet}
       fullCode={fullCode}
     />
+  </Box>
+);
+
+/* ==========================================
+   PROPERTY EXAMPLE
+========================================== */
+
+export const PropertyExample = ({
+  title,
+  description,
+  snippet,
+  fullCode,
+  note,
+  previewData,
+  previewWidth = 400,
+  children
+}) => (
+  <Box sx={{ mb: 5 }}>
+    <Typography
+      variant="h5"
+      sx={{
+        fontWeight: 600,
+        mb: 2
+      }}
+    >
+      {title}
+    </Typography>
+
+    {description && (
+      <ContentBlock>
+        {description}
+      </ContentBlock>
+    )}
+
+    {previewData && (
+      <LivePreview>
+        <Box
+          sx={{
+            width: '100%',
+            maxWidth: previewWidth
+          }}
+        >
+          <Form data={previewData} />
+        </Box>
+      </LivePreview>
+    )}
+
+    {children}
+
+    <CodeBlock
+      language="jsx"
+      snippet={snippet}
+      fullCode={fullCode}
+    />
+
+    {note && (
+      <Box sx={{ mt: 2 }}>
+        <InfoCallout>
+          {note}
+        </InfoCallout>
+      </Box>
+    )}
+  </Box>
+);
+
+/* ==========================================
+   PROPS SECTION
+========================================== */
+
+export const PropsSection = ({ data }) => (
+  <ContentSection
+    id="supported-properties"
+    title="Supported Properties"
+  >
+    <PropsTable data={data} />
+  </ContentSection>
+);
+
+/* ==========================================
+   PROPS SECTION
+========================================== */
+
+export const NextStepCard = ({
+  title = 'Next Step',
+  description
+}) => (
+  <Paper
+    variant="outlined"
+    sx={(theme) => ({
+      mt: 6,
+      p: 3,
+      borderRadius: 3,
+      border: `1px solid ${theme.palette.divider}`,
+      backgroundColor:
+        theme.palette.mode === 'dark'
+          ? 'rgba(255,255,255,0.02)'
+          : 'rgba(25,118,210,0.03)'
+    })}
+  >
+    <Typography
+      variant="h5"
+      sx={{
+        fontWeight: 700,
+        mb: 1
+      }}
+    >
+      {title}
+    </Typography>
+
+    <Typography color="text.secondary">
+      {description}
+    </Typography>
+  </Paper>
+);
+
+/* ==========================================
+   PROPS SECTION
+========================================== */
+
+export const RelatedSection = ({
+  id,
+  title = 'Related Documentation',
+  children
+}) => (
+  <Box
+    id={id}
+    sx={{
+      mt: 6
+    }}
+  >
+    <Typography
+      variant="h4"
+      sx={{
+        fontWeight: 700,
+        mb: 3
+      }}
+    >
+      {title}
+    </Typography>
+
+    <Paper
+      variant="outlined"
+      sx={(theme) => ({
+        p: 3,
+        borderRadius: 3,
+        border: `1px solid ${theme.palette.divider}`,
+        backgroundColor:
+          theme.palette.mode === 'dark'
+            ? 'rgba(255,255,255,0.02)'
+            : 'background.paper'
+      })}
+    >
+      {children}
+    </Paper>
   </Box>
 );

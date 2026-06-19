@@ -68,7 +68,7 @@ Fields
 ├─ Email Field
 ├─ Password Field
 ├─ Number Field
-├─ Date Field
+├─ Date Field *
 ├─ Textarea
 ├─ Radio Group
 ├─ Checkbox
