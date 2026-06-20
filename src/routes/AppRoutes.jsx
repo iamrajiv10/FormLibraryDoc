@@ -29,6 +29,7 @@ import TextareaField from '../pages/Fields/TextAreaField';
 import RadioGroup from '../pages/Fields/RadioGroup';
 import CheckboxField from '../pages/Fields/CheckboxField';
 import CheckboxGroupField from '../pages/Fields/CheckboxGruopField';
+import SelectFieldPage from '../pages/Fields/SelectField';
 
 const AppRoutes = ({ toggleTheme, mode }) => {
   return (
@@ -57,6 +58,7 @@ const AppRoutes = ({ toggleTheme, mode }) => {
         <Route path="fields/radiogroup-field" element={<RadioGroup />} />
         <Route path="fields/checkbox-field" element={<CheckboxField />} />
         <Route path="fields/checkboxgroup-field" element={<CheckboxGroupField />} />
+        <Route path="fields/select-field" element={<SelectFieldPage />} />
 
 
         {/* Features */}

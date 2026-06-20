@@ -27,6 +27,7 @@ export const sidebarConfig = [
       { label: 'Radio Gruop Field', path: '/fields/radiogroup-field' },
       { label: 'CheckBox Field', path: '/fields/checkbox-field' },
       { label: 'CheckBox Group Field', path: '/fields/checkboxgroup-field' },
+      { label: 'Select Field', path: '/fields/select-field' },
 
     ],
   },
