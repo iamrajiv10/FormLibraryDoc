@@ -23,6 +23,11 @@ export const sidebarConfig = [
       { label: 'Password Field', path: '/fields/password-field' },
       { label: 'Number Field', path: '/fields/number-field' },
       { label: 'Date Field', path: '/fields/date-field' },
+      { label: 'TextArea Field', path: '/fields/textarea-field' },
+      { label: 'Radio Gruop Field', path: '/fields/radiogroup-field' },
+      { label: 'CheckBox Field', path: '/fields/checkbox-field' },
+      { label: 'CheckBox Group Field', path: '/fields/checkboxgroup-field' },
+
     ],
   },
   {

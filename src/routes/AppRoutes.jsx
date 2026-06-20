@@ -25,6 +25,10 @@ import EmailFieldPage from '../pages/Fields/EmailField';
 import PasswordFieldPage from '../pages/Fields/PasswordField';
 import NumberField from '../pages/Fields/NumberField';
 import DateFieldPage from '../pages/Fields/DateField';
+import TextareaField from '../pages/Fields/TextAreaField';
+import RadioGroup from '../pages/Fields/RadioGroup';
+import CheckboxField from '../pages/Fields/CheckboxField';
+import CheckboxGroupField from '../pages/Fields/CheckboxGruopField';
 
 const AppRoutes = ({ toggleTheme, mode }) => {
   return (
@@ -49,6 +53,11 @@ const AppRoutes = ({ toggleTheme, mode }) => {
         <Route path="fields/password-field" element={<PasswordFieldPage />} />
         <Route path="fields/number-field" element={<NumberField />} />
         <Route path="fields/date-field" element={<DateFieldPage />} />
+        <Route path="fields/textarea-field" element={<TextareaField />} />
+        <Route path="fields/radiogroup-field" element={<RadioGroup />} />
+        <Route path="fields/checkbox-field" element={<CheckboxField />} />
+        <Route path="fields/checkboxgroup-field" element={<CheckboxGroupField />} />
+
 
         {/* Features */}
         <Route path="features/conditional-form" element={<ConditionalFormDoc />} />
