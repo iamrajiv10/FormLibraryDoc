@@ -12,14 +12,21 @@ import TextFieldDoc from '../pages/Fields/TextField';
 import EmailFieldDoc from '../pages/Fields/EmailField';
 import PasswordFieldDoc from '../pages/Fields/PasswordField';
 
-import ConditionalFormDoc from '../pages/Features/ConditionalForm';
-import RepeatableGroupDoc from '../pages/Features/RepeatableGroup';
+import ConditionalFormPage from '../pages/Features/ConditionalForm';
+import RepeatableGroupDoc from '../pages/Features/RepeatableGroup/RepeatableGroup';
 import GridSystemDoc from '../pages/Features/GridSystem';
+import GridLayoutDoc from '../pages/Features/GridLayout';
+import ValidationDoc from '../pages/Features/Validation/Validation';
+import InitialValuesDoc from '../pages/Features/InitialValues/InitialValues';
+import DisabledFieldsDoc from '../pages/Features/DisabledFields/DisabledFields';
+
+
 
 import RegistrationFormDoc from '../pages/Examples/RegistrationForm';
+
+
 import EducationFormDoc from '../pages/Examples/EducationForm';
 import QuickStart from '../pages/GettingStarted/QuickStart';
-import ConditionalFormPage from '../pages/Component/ConditionalForm';
 import TextFieldPage from '../pages/Fields/TaxtField';
 import EmailFieldPage from '../pages/Fields/EmailField';
 import PasswordFieldPage from '../pages/Fields/PasswordField';
@@ -30,6 +37,11 @@ import RadioGroup from '../pages/Fields/RadioGroup';
 import CheckboxField from '../pages/Fields/CheckboxField';
 import CheckboxGroupField from '../pages/Fields/CheckboxGruopField';
 import SelectFieldPage from '../pages/Fields/SelectField';
+import ConditionalFormComponent from '../pages/Component/ConditionalForm';
+import FormStylingPage from '../pages/Features/FormStyling/FormStyling';
+import ButtonConfigurationPage from '../pages/Features/ButtonConfiguration/ButtonConfiguration';
+import ResponsiveLayoutDoc from '../pages/Features/ResponsiveLayout/ResponsiveLayout';
+
 
 const AppRoutes = ({ toggleTheme, mode }) => {
   return (
@@ -45,7 +57,7 @@ const AppRoutes = ({ toggleTheme, mode }) => {
 
         {/* Components */}
         <Route path="components/static-form" element={<FormComponent />} />
-        <Route path="components/conditional-form" element={<ConditionalFormPage />} />
+        <Route path="components/conditional-form" element={<ConditionalFormComponent />} />
 
         {/* Fields */}
         <Route path="fields/text-field-Page" element={<TextFieldPage />} />
@@ -62,11 +74,25 @@ const AppRoutes = ({ toggleTheme, mode }) => {
 
 
         {/* Features */}
-        <Route path="features/conditional-form" element={<ConditionalFormDoc />} />
+        <Route path="features/conditional-form" element={<ConditionalFormPage />} />
         <Route path="features/repeatable-group" element={<RepeatableGroupDoc />} />
         <Route path="features/grid-system" element={<GridSystemDoc />} />
+        <Route path="features/grid-layout" element={<GridLayoutDoc />} />
+        <Route path="features/validation" element={<ValidationDoc />} />
+        <Route path="features/initial-values" element={<InitialValuesDoc />} />
+        <Route path="features/disabled-fields" element={<DisabledFieldsDoc />} />
+        <Route path="features/form-styling" element={<FormStylingPage />} />
+        <Route path="features/button-configuration" element={<ButtonConfigurationPage />} />
+        <Route path="features/responsive-layout" element={<ResponsiveLayoutDoc />} />
 
+
+
+
+
+        
+        
         {/* Examples */}
+
         <Route path="examples/registration-form" element={<RegistrationFormDoc />} />
         <Route path="examples/education-form" element={<EducationFormDoc />} />
       </Route>

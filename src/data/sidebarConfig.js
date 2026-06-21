@@ -11,7 +11,7 @@ export const sidebarConfig = [
     title: 'Components',
     items: [
       { label: 'Static Form', path: '/components/static-form' },
-      { label: 'Conditional Form', path: '/components/conditional-form' },
+      { label: 'Conditional Form', path: 'components/conditional-form' },
     ],
   },
   {
@@ -37,8 +37,21 @@ export const sidebarConfig = [
       { label: 'Conditional Form', path: '/features/conditional-form' },
       { label: 'Repeatable Group', path: '/features/repeatable-group' },
       { label: 'Grid System', path: '/features/grid-system' },
+      { label: 'Grid Layout', path: '/features/grid-layout' },
+      { label: 'Validation', path: '/features/validation' },
+      { label: 'Initial Values', path: '/features/initial-values' },
+      { label: 'Disabled Fields', path: '/features/disabled-fields' },
+      { label: 'Form Styling', path: '/features/form-styling' },
+      { label: 'Button Configuration', path: '/features/button-configuration' },
+      { label: 'Responsive Layout', path: '/features/responsive-layout' },
+
+
+
     ],
   },
+
+
+
   {
     title: 'Examples',
     items: [
