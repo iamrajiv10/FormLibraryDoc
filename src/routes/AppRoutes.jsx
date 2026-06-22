@@ -8,9 +8,9 @@ import Installation from '../pages/GettingStarted/Installation';
 
 import FormComponent from '../pages/Component/Form';
 
-import TextFieldDoc from '../pages/Fields/TextField';
 import EmailFieldDoc from '../pages/Fields/EmailField';
 import PasswordFieldDoc from '../pages/Fields/PasswordField';
+
 
 import ConditionalFormPage from '../pages/Features/ConditionalForm';
 import RepeatableGroupDoc from '../pages/Features/RepeatableGroup/RepeatableGroup';
@@ -27,20 +27,24 @@ import RegistrationFormDoc from '../pages/Examples/RegistrationForm';
 
 import EducationFormDoc from '../pages/Examples/EducationForm';
 import QuickStart from '../pages/GettingStarted/QuickStart';
-import TextFieldPage from '../pages/Fields/TaxtField';
+import TixtFieldPage from '../pages/Fields/TaxtField';
 import EmailFieldPage from '../pages/Fields/EmailField';
 import PasswordFieldPage from '../pages/Fields/PasswordField';
 import NumberField from '../pages/Fields/NumberField';
-import DateFieldPage from '../pages/Fields/DateField';
 import TextareaField from '../pages/Fields/TextAreaField';
 import RadioGroup from '../pages/Fields/RadioGroup';
-import CheckboxField from '../pages/Fields/CheckboxField';
+import CheckboxField from '../pages/Fields/Checkbox/Checkbox';
+
+
 import CheckboxGroupField from '../pages/Fields/CheckboxGruopField';
 import SelectFieldPage from '../pages/Fields/SelectField';
+import TextFieldPage from '../pages/Fields/TextField/TextField';
 import ConditionalFormComponent from '../pages/Component/ConditionalForm';
+
 import FormStylingPage from '../pages/Features/FormStyling/FormStyling';
 import ButtonConfigurationPage from '../pages/Features/ButtonConfiguration/ButtonConfiguration';
 import ResponsiveLayoutDoc from '../pages/Features/ResponsiveLayout/ResponsiveLayout';
+import DateFieldPage from '../pages/Fields/DateField/DateField';
 
 
 const AppRoutes = ({ toggleTheme, mode }) => {
@@ -60,23 +64,21 @@ const AppRoutes = ({ toggleTheme, mode }) => {
         <Route path="components/conditional-form" element={<ConditionalFormComponent />} />
 
         {/* Fields */}
-        <Route path="fields/text-field-Page" element={<TextFieldPage />} />
-        <Route path="fields/text-field" element={<TextFieldDoc />} />
         <Route path="fields/email-field" element={<EmailFieldPage />} />
         <Route path="fields/password-field" element={<PasswordFieldPage />} />
         <Route path="fields/number-field" element={<NumberField />} />
-        <Route path="fields/date-field" element={<DateFieldPage />} />
         <Route path="fields/textarea-field" element={<TextareaField />} />
         <Route path="fields/radiogroup-field" element={<RadioGroup />} />
         <Route path="fields/checkbox-field" element={<CheckboxField />} />
         <Route path="fields/checkboxgroup-field" element={<CheckboxGroupField />} />
         <Route path="fields/select-field" element={<SelectFieldPage />} />
+        <Route path="fields/text-field" element={<TextFieldPage />} />
+        <Route path="fields/date-field" element={<DateFieldPage />} />
 
 
         {/* Features */}
         <Route path="features/conditional-form" element={<ConditionalFormPage />} />
         <Route path="features/repeatable-group" element={<RepeatableGroupDoc />} />
-        <Route path="features/grid-system" element={<GridSystemDoc />} />
         <Route path="features/grid-layout" element={<GridLayoutDoc />} />
         <Route path="features/validation" element={<ValidationDoc />} />
         <Route path="features/initial-values" element={<InitialValuesDoc />} />
@@ -84,11 +86,6 @@ const AppRoutes = ({ toggleTheme, mode }) => {
         <Route path="features/form-styling" element={<FormStylingPage />} />
         <Route path="features/button-configuration" element={<ButtonConfigurationPage />} />
         <Route path="features/responsive-layout" element={<ResponsiveLayoutDoc />} />
-
-
-
-
-
         
         
         {/* Examples */}

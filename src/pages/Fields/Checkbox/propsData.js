@@ -1,4 +1,4 @@
-export const propsData = [
+export const checkboxPropsData = [
   {
     property: 'label',
     type: 'string',
@@ -15,7 +15,7 @@ export const propsData = [
     property: 'type',
     type: 'string',
     required: 'Yes',
-    description: 'Must be "checkbox"'
+    description: 'Field type'
   },
   {
     property: 'required',
@@ -33,7 +33,13 @@ export const propsData = [
     property: 'disabled',
     type: 'boolean',
     required: 'No',
-    description: 'Disables checkbox interaction'
+    description: 'Disables checkbox'
+  },
+  {
+    property: 'grid',
+    type: 'object',
+    required: 'No',
+    description: 'Responsive layout'
   },
   {
     property: 'style',
@@ -46,11 +52,6 @@ export const propsData = [
     type: 'object',
     required: 'No',
     description: 'Label styling'
-  },
-  {
-    property: 'grid',
-    type: 'object',
-    required: 'No',
-    description: 'Responsive layout configuration'
   }
 ];
+

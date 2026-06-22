@@ -72,35 +72,11 @@ function Example() {
 
 export default Example;`;
 
-export const valueSnippet = `{
-  label: "Age",
-  name: "age",
-  type: "number",
-  value: 25
-}`;
-
-export const valueFullCode = `import { Form } from "formLibrary";
-
-function Example() {
-  const formData = [
-    {
-      label: "Age",
-      name: "age",
-      type: "number",
-      value: 25
-    }
-  ];
-
-  return <Form data={formData} />;
-}
-
-export default Example;`;
 
 export const disabledSnippet = `{
   label: "Age",
   name: "age",
   type: "number",
-  value: 25,
   disabled: true
 }`;
 
@@ -112,7 +88,6 @@ function Example() {
       label: "Age",
       name: "age",
       type: "number",
-      value: 25,
       disabled: true
     }
   ];
@@ -265,8 +240,6 @@ export const fullExampleSnippet = `const formData = [
 
     errorMessage: "Please enter your years of experience.",
 
-    value: 5,
-
     style: {
       borderRadius: "8px"
     },
@@ -294,8 +267,6 @@ function Example() {
       required: true,
 
       errorMessage: "Please enter your years of experience.",
-
-      value: 5,
 
       style: {
         borderRadius: "8px"

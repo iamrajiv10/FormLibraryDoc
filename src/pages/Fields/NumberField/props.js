@@ -30,12 +30,6 @@ export const propsData = [
     description: 'Custom validation message'
   },
   {
-    property: 'value',
-    type: 'number',
-    required: 'No',
-    description: 'Initial value'
-  },
-  {
     property: 'disabled',
     type: 'boolean',
     required: 'No',

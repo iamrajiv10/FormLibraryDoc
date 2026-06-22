@@ -6,21 +6,11 @@ export const basicExampleData = [
   }
 ];
 
-export const valueExampleData = [
-  {
-    label: 'Password',
-    name: 'password',
-    type: 'password',
-    value: 'MySecurePassword'
-  }
-];
-
 export const disabledExampleData = [
   {
     label: 'Password',
     name: 'password',
     type: 'password',
-    value: 'MySecurePassword',
     disabled: true
   }
 ];
@@ -32,7 +22,6 @@ export const fullExampleData = [
     type: 'password',
     required: true,
     errorMessage: 'Please enter your password.',
-    value: 'MySecurePassword',
 
     style: {
       borderRadius: '8px'

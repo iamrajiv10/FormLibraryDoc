@@ -72,35 +72,11 @@ function Example() {
 
 export default Example;`;
 
-export const valueSnippet = `{
-  label: "Password",
-  name: "password",
-  type: "password",
-  value: "MySecurePassword"
-}`;
-
-export const valueFullCode = `import { Form } from "formLibrary";
-
-function Example() {
-  const formData = [
-    {
-      label: "Password",
-      name: "password",
-      type: "password",
-      value: "MySecurePassword"
-    }
-  ];
-
-  return <Form data={formData} />;
-}
-
-export default Example;`;
 
 export const disabledSnippet = `{
   label: "Password",
   name: "password",
   type: "password",
-  value: "MySecurePassword",
   disabled: true
 }`;
 
@@ -112,7 +88,6 @@ function Example() {
       label: "Password",
       name: "password",
       type: "password",
-      value: "MySecurePassword",
       disabled: true
     }
   ];
@@ -254,8 +229,6 @@ export const fullExampleSnippet = `const formData = [
 
     errorMessage: "Please enter your password.",
 
-    value: "MySecurePassword",
-
     style: {
       borderRadius: "8px"
     },
@@ -283,8 +256,6 @@ function Example() {
       required: true,
 
       errorMessage: "Please enter your password.",
-
-      value: "MySecurePassword",
 
       style: {
         borderRadius: "8px"

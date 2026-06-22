@@ -6,45 +6,61 @@ export const pageContent = {
 
 export const checkboxGroupProps = [
   {
-    name: 'options',
-    type: 'array',
-    required: true,
-    description: 'List of selectable options.'
-  },
-  {
-    name: 'required',
-    type: 'boolean',
-    required: false,
+    property: 'label',
+    type: 'string',
+    required: 'Yes',
+    description: 'Checkbox Group label.'
+  },{
+    property: 'name',
+    type: 'string',
+    required: 'Yes',
+    description: 'Unique field identifier.'
+  },{
+    property: 'type',
+    type: 'string',
+    required: 'Yes',
     description: 'Enables validation.'
   },
   {
-    name: 'errorMessage',
+    property: 'options',
+    type: 'array',
+    required: 'Yes',
+    description: 'List of selectable options.'
+  },
+  {
+    property: 'required',
+    type: 'boolean',
+    required: 'No',
+    description: 'Enables validation.'
+  },
+  {
+    property: 'errorMessage',
     type: 'string',
-    required: false,
+    required: 'No',
     description: 'Custom validation message.'
   },
   {
-    name: 'disabled',
+    property: 'disabled',
     type: 'boolean',
-    required: false,
+    required: 'No',
     description: 'Disables selection.'
   },
   {
-    name: 'style',
+    property: 'style',
     type: 'object',
-    required: false,
+    required: 'No',
     description: 'Field styling.'
   },
   {
-    name: 'labelStyle',
+    property: 'labelStyle',
     type: 'object',
-    required: false,
+    required: 'No',
     description: 'Label styling.'
   },
   {
-    name: 'grid',
+    property: 'grid',
     type: 'object',
-    required: false,
+    required: 'No',
     description: 'Responsive layout configuration.'
   }
 ];

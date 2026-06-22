@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Divider } from '@mui/material';
 import { Form } from 'formLibrary';
 
 import {
@@ -8,7 +8,8 @@ import {
   InfoCallout,
   BulletList,
   PropertyExample,
-  PropsSection
+  PropsSection,
+  ChipGroup
 } from '../../../components/Customs';
 
 import LivePreview from '../../../components/LivePreview/LivePreview';
@@ -17,8 +18,7 @@ import CodeBlock from '../../../components/CodeBlock/CodeBlock';
 import {
   overviewContent,
   commonUseCases,
-  relatedFields,
-  advancedFeatures
+  relatedDocs,
 } from './content';
 
 import {
@@ -60,11 +60,17 @@ const RadioGroup = () => {
         description={overviewContent.description}
         details={overviewContent.details}
       />
+      <Divider sx={{ my: 2 }} />
+
 
       <ContentSection
         id="basic-example"
         title="Basic Example"
       >
+        <ContentBlock>
+          Radio Group Fields are rendered when the field type is set to
+          {' '}<strong>"radio"</strong>.
+        </ContentBlock>
         <LivePreview>
           <Box sx={{ width: '100%', maxWidth: 400 }}>
             <Form data={basicExampleData} />
@@ -76,18 +82,13 @@ const RadioGroup = () => {
           snippet={radioBasicSnippet}
           fullCode={radioBasicFullCode}
         />
-
-        <ContentBlock>
-          Radio Group Fields are rendered when the field type is set to
-          {' '}<strong>"radio"</strong>.
-        </ContentBlock>
-
-        <ContentBlock>
+        <InfoCallout>
           Like all Form Library fields, Radio Groups support validation,
           responsive layouts, styling customization, disabled states,
           and conditional rendering.
-        </ContentBlock>
+        </InfoCallout>
       </ContentSection>
+      <Divider sx={{ my: 2 }} />
 
       <ContentSection
         id="properties"
@@ -98,10 +99,9 @@ const RadioGroup = () => {
           description="Defines the available choices displayed inside the radio group."
           snippet={radioOptionsSnippet}
           fullCode={radioOptionsFullCode}
+          noet='The user can select only one option from the available choices.'
         >
-          <InfoCallout>
-            The user can select only one option from the available choices.
-          </InfoCallout>
+
         </PropertyExample>
 
         <PropertyExample
@@ -137,16 +137,13 @@ const RadioGroup = () => {
           description="Display the radio group while preventing selection changes."
           snippet={radioDisabledSnippet}
           fullCode={radioDisabledFullCode}
+          note='The options remain visible but cannot be changed.'
         >
           <LivePreview>
             <Box sx={{ width: '100%', maxWidth: 500 }}>
               <Form data={disabledExampleData} />
             </Box>
           </LivePreview>
-
-          <InfoCallout>
-            The options remain visible but cannot be changed.
-          </InfoCallout>
         </PropertyExample>
 
         <PropertyExample
@@ -154,11 +151,9 @@ const RadioGroup = () => {
           description="Control how the field is displayed within responsive layouts."
           snippet={radioGridSnippet}
           fullCode={radioGridFullCode}
+          note='Radio Group Fields fully support Form Library&apos;s responsive grid system.
+            If xs is not provided, Form Library automatically treats it as xs: 12.'
         >
-          <InfoCallout>
-            Radio Group Fields fully support Form Library&apos;s responsive grid system.
-            If xs is not provided, Form Library automatically treats it as xs: 12.
-          </InfoCallout>
         </PropertyExample>
 
         <PropertyExample
@@ -166,10 +161,8 @@ const RadioGroup = () => {
           description="Apply custom styling directly to the radio group field."
           snippet={radioStyleSnippet}
           fullCode={radioStyleFullCode}
+          note='Use this when a specific Radio Group requires custom styling.'
         >
-          <InfoCallout>
-            Use this when a specific Radio Group requires custom styling.
-          </InfoCallout>
         </PropertyExample>
 
         <PropertyExample
@@ -180,7 +173,10 @@ const RadioGroup = () => {
         />
       </ContentSection>
 
-            <ContentSection
+      <Divider sx={{ my: 2 }} />
+
+
+      <ContentSection
         id="radio-selection-behavior"
         title="Radio Selection Behavior"
       >
@@ -248,6 +244,8 @@ const RadioGroup = () => {
           This allows dynamic forms where fields appear based on user selections.
         </ContentBlock>
       </ContentSection>
+
+      <Divider sx={{ my: 2 }} />
 
       <ContentSection
         id="styling"
@@ -338,6 +336,8 @@ export default Example;`}
         </InfoCallout>
       </ContentSection>
 
+      <Divider sx={{ my: 2 }} />
+
       <ContentSection
         id="validation"
         title="Validation"
@@ -379,9 +379,10 @@ function Example() {
 export default Example;`}
         />
 
-        <ContentBlock>
+        <InfoCallout>
           If the user does not select any option, validation prevents form submission.
-        </ContentBlock>
+        </InfoCallout>
+        <Box sx={{ mb: 5 }}></Box>
 
         <PropertyExample
           title="Custom Validation Message"
@@ -420,6 +421,7 @@ export default Example;`}
           note="Please select a plan."
         />
       </ContentSection>
+      <Divider sx={{ my: 2 }} />
 
       <ContentSection
         id="full-example"
@@ -437,50 +439,33 @@ export default Example;`}
           fullCode={radioFullExampleFullCode}
         />
 
-        <ContentBlock>
+        <InfoCallout>
           This example demonstrates options, validation, styling, and responsive
           layouts working together.
-        </ContentBlock>
+        </InfoCallout>
       </ContentSection>
+      <Divider sx={{ my: 2 }} />
 
       <PropsSection data={propsData} />
+      <Divider sx={{ my: 2 }} />
 
       <ContentSection
         id="related-documentation"
-        title="Related Documentation"
+        title={relatedDocs.title}
       >
-        <Box sx={{ mb: 4 }}>
-          <BulletList
-            title="Components"
-            items={[
-              'Form',
-              'ConditionalForm'
-            ]}
-          />
-        </Box>
+        <ChipGroup
+          title="Components"
+          items={relatedDocs.components}
+        />
 
-        <Box sx={{ mb: 4 }}>
-          <BulletList
-            title="Other Fields"
-            items={[
-              'Checkbox Group',
-              'Select Field',
-              'Text Field',
-              'Email Field',
-              'Password Field'
-            ]}
-          />
-        </Box>
+        <ChipGroup
+          title="Other Fields"
+          items={relatedDocs.fields}
+        />
 
-        <BulletList
+        <ChipGroup
           title="Advanced Features"
-          items={[
-            'Conditional Rendering',
-            'Validation',
-            'Grid Layout',
-            'Disabled Fields',
-            'Field Styling'
-          ]}
+          items={relatedDocs.features}
         />
       </ContentSection>
 

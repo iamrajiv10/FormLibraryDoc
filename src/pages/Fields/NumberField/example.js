@@ -25,21 +25,13 @@ export const errorMessageExampleData = [
   }
 ];
 
-export const valueExampleData = [
-  {
-    label: 'Age',
-    name: 'age',
-    type: 'number',
-    value: 25
-  }
-];
+
 
 export const disabledExampleData = [
   {
     label: 'Age',
     name: 'age',
     type: 'number',
-    value: 25,
     disabled: true
   }
 ];
@@ -87,7 +79,6 @@ export const fullExampleData = [
     type: 'number',
     required: true,
     errorMessage: 'Please enter your years of experience.',
-    value: 5,
     style: {
       borderRadius: '8px'
     },

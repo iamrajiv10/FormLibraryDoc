@@ -27,9 +27,10 @@ import {
 
 import {
   example1Data,
+  example4Data,
   example5Data,
   example9Data
-} from './example';
+} from './textFieldData';
 
 import { propsData } from './props';
 
@@ -43,11 +44,14 @@ import {
   errorMessageSnippet,
   errorMessageFullCode,
 
-  valueSnippet,
-  valueFullCode,
-
   disabledSnippet,
   disabledFullCode,
+
+  initialValuesSnippet,
+  initialValuesFullCode,
+
+  placeholderSnippet,
+  placeholderFullCode,
 
   gridSnippet,
   gridFullCode,
@@ -58,12 +62,6 @@ import {
   labelStyleSnippet,
   labelStyleFullCode,
 
-  fieldStylingSnippet,
-  fieldStylingFullCode,
-
-  labelStylingSnippet,
-  labelStylingFullCode,
-
   validationSnippet,
   validationFullCode,
 
@@ -72,9 +70,9 @@ import {
 
   fullExampleSnippet,
   fullExampleFullCode
-} from './codeExample';
+} from './snippetCode';
 
-const EmailFieldPage = () => {
+const TextFieldPage = () => {
   return (
     <Box sx={{ pb: 8, maxWidth: '1000px', mx: 'auto' }}>
       <PageHeader
@@ -83,19 +81,15 @@ const EmailFieldPage = () => {
         details={overviewContent.details}
       />
 
-      <InfoCallout sx={{ mb: 5 }}>
-        {overviewContent.conclusion}
-      </InfoCallout>
-            <Divider sx={{ my: 2 }} />
+      <InfoCallout sx={{ mb: 5 }}>{overviewContent.conclusion}</InfoCallout>
 
+      <Divider sx={{ my: 2 }} />
       {/* ==========================================
           BASIC EXAMPLE
       ========================================== */}
 
       <ContentSection id="basic-example" title={basicExampleContent.title}>
-        <ContentBlock>
-          {basicExampleContent.description}
-        </ContentBlock>
+        <ContentBlock>{basicExampleContent.description}</ContentBlock>
 
         <LivePreview>
           <Box sx={{ width: '100%', maxWidth: 400 }}>
@@ -110,12 +104,11 @@ const EmailFieldPage = () => {
         />
 
         <Box sx={{ mt: 3 }}>
-          <InfoCallout>
-            {basicExampleContent.conclusion}
-          </InfoCallout>
+          <InfoCallout>{basicExampleContent.conclusion}</InfoCallout>
         </Box>
       </ContentSection>
-            <Divider sx={{ my: 2 }} />
+
+      <Divider sx={{ my: 2 }} />
 
       {/* ==========================================
           PROPERTIES
@@ -123,11 +116,25 @@ const EmailFieldPage = () => {
 
       <ContentSection id="properties" title={propertiesContent.title}>
         <Typography variant="h5" sx={{ fontWeight: 600, mb: 2 }}>
+          label
+        </Typography>
+
+        <ContentBlock>
+          Defines the text displayed above the field.
+        </ContentBlock>
+
+        <CodeBlock
+          language="jsx"
+          snippet={placeholderSnippet}
+          fullCode={placeholderFullCode}
+        />
+
+        <Typography variant="h5" sx={{ fontWeight: 600, mt: 5, mb: 2 }}>
           required
         </Typography>
 
         <ContentBlock>
-          Marks the email field as mandatory.
+          Makes the field mandatory during validation.
         </ContentBlock>
 
         <CodeBlock
@@ -137,9 +144,7 @@ const EmailFieldPage = () => {
         />
 
         <InfoCallout sx={{ mt: 2 }}>
-          Default validation message:
-          <br />
-          This is a required field.
+          Validation happens when the form is submitted.
         </InfoCallout>
 
         <Typography variant="h5" sx={{ fontWeight: 600, mt: 5, mb: 2 }}>
@@ -147,7 +152,7 @@ const EmailFieldPage = () => {
         </Typography>
 
         <ContentBlock>
-          Customize the validation message displayed when the field is empty.
+          Customize validation error message.
         </ContentBlock>
 
         <CodeBlock
@@ -161,7 +166,7 @@ const EmailFieldPage = () => {
         </Typography>
 
         <ContentBlock>
-          Display the field while preventing modifications.
+          Disables user interaction with the field.
         </ContentBlock>
 
         <LivePreview>
@@ -177,11 +182,39 @@ const EmailFieldPage = () => {
         />
 
         <Typography variant="h5" sx={{ fontWeight: 600, mt: 5, mb: 2 }}>
+          initialValues Support
+        </Typography>
+
+        <ContentBlock>
+          Prefilled values are passed through the Form component using initialValues.
+        </ContentBlock>
+
+        <CodeBlock
+          language="jsx"
+          snippet={initialValuesSnippet}
+          fullCode={initialValuesFullCode}
+        />
+
+        <Typography variant="h5" sx={{ fontWeight: 600, mt: 5, mb: 2 }}>
+          placeholder
+        </Typography>
+
+        <ContentBlock>
+          Displays hint text inside the field.
+        </ContentBlock>
+
+        <CodeBlock
+          language="jsx"
+          snippet={placeholderSnippet}
+          fullCode={placeholderFullCode}
+        />
+
+        <Typography variant="h5" sx={{ fontWeight: 600, mt: 5, mb: 2 }}>
           grid
         </Typography>
 
         <ContentBlock>
-          Control how the field is displayed within responsive layouts.
+          Controls responsive field layout.
         </ContentBlock>
 
         <CodeBlock
@@ -190,16 +223,12 @@ const EmailFieldPage = () => {
           fullCode={gridFullCode}
         />
 
-        <InfoCallout sx={{ mt: 2 }}>
-          Email Fields fully support Form Library&apos;s responsive grid system.
-        </InfoCallout>
-
         <Typography variant="h5" sx={{ fontWeight: 600, mt: 5, mb: 2 }}>
           style
         </Typography>
 
         <ContentBlock>
-          Apply custom styling directly to the email field.
+          Customize field appearance.
         </ContentBlock>
 
         <CodeBlock
@@ -208,16 +237,12 @@ const EmailFieldPage = () => {
           fullCode={styleFullCode}
         />
 
-        <InfoCallout sx={{ mt: 2 }}>
-          Use this when a specific email field requires custom styling.
-        </InfoCallout>
-
         <Typography variant="h5" sx={{ fontWeight: 600, mt: 5, mb: 2 }}>
           labelStyle
         </Typography>
 
         <ContentBlock>
-          Apply styling to the field label.
+          Customize label appearance.
         </ContentBlock>
 
         <CodeBlock
@@ -225,21 +250,16 @@ const EmailFieldPage = () => {
           snippet={labelStyleSnippet}
           fullCode={labelStyleFullCode}
         />
-
-        <InfoCallout sx={{ mt: 2 }}>
-          This allows labels to match branding or design requirements.
-        </InfoCallout>
       </ContentSection>
-            <Divider sx={{ my: 2 }} />
 
-            {/* ==========================================
+      <Divider sx={{ my: 2 }} />
+
+      {/* ==========================================
           STYLING
       ========================================== */}
 
       <ContentSection id="styling" title={stylingContent.title}>
-        <ContentBlock>
-          {stylingContent.description}
-        </ContentBlock>
+        <ContentBlock>{stylingContent.description}</ContentBlock>
 
         <Typography variant="h5" sx={{ fontWeight: 600, mb: 2 }}>
           Field Styling Example
@@ -247,25 +267,21 @@ const EmailFieldPage = () => {
 
         <CodeBlock
           language="jsx"
-          snippet={fieldStylingSnippet}
-          fullCode={fieldStylingFullCode}
+          snippet={styleSnippet}
+          fullCode={styleFullCode}
         />
 
         <Typography
           variant="h5"
-          sx={{
-            fontWeight: 600,
-            mt: 5,
-            mb: 2
-          }}
+          sx={{ fontWeight: 600, mt: 5, mb: 2 }}
         >
           Label Styling Example
         </Typography>
 
         <CodeBlock
           language="jsx"
-          snippet={labelStylingSnippet}
-          fullCode={labelStylingFullCode}
+          snippet={labelStyleSnippet}
+          fullCode={labelStyleFullCode}
         />
 
         <Box sx={{ mt: 3 }}>
@@ -274,19 +290,18 @@ const EmailFieldPage = () => {
           </InfoCallout>
         </Box>
       </ContentSection>
-            <Divider sx={{ my: 2 }} />
+
+      <Divider sx={{ my: 2 }} />
 
       {/* ==========================================
           VALIDATION
       ========================================== */}
 
       <ContentSection id="validation" title={validationContent.title}>
-        <ContentBlock>
-          {validationContent.description}
-        </ContentBlock>
+        <ContentBlock>{validationContent.description}</ContentBlock>
 
         <Typography variant="h5" sx={{ fontWeight: 600, mb: 2 }}>
-          Required Validation
+          required validation
         </Typography>
 
         <CodeBlock
@@ -297,36 +312,30 @@ const EmailFieldPage = () => {
 
         <Box sx={{ mt: 3 }}>
           <InfoCallout>
-            If the field is left empty during submission, validation
-            automatically prevents form submission.
+            If the field is left empty during submission, validation automatically prevents form submission.
           </InfoCallout>
         </Box>
 
         <Typography
           variant="h5"
-          sx={{
-            fontWeight: 600,
-            mt: 5,
-            mb: 2
-          }}
+          sx={{ fontWeight: 600, mt: 5, mb: 2 }}
         >
-          Custom Validation Message
+          custom validation message
         </Typography>
+
+        <ContentBlock>
+          Customize validation error message.
+        </ContentBlock>
 
         <CodeBlock
           language="jsx"
           snippet={customValidationSnippet}
           fullCode={customValidationFullCode}
         />
-
-        <Box sx={{ mt: 3 }}>
-          <InfoCallout>
-            Email address is required.
-          </InfoCallout>
-        </Box>
       </ContentSection>
-            <Divider sx={{ my: 2 }} />
-      
+
+      <Divider sx={{ my: 2 }} />
+
       {/* ==========================================
           FULL EXAMPLE
       ========================================== */}
@@ -353,7 +362,8 @@ const EmailFieldPage = () => {
           </InfoCallout>
         </Box>
       </ContentSection>
-            <Divider sx={{ my: 2 }} />
+
+      <Divider sx={{ my: 2 }} />
 
       {/* ==========================================
           SUPPORTED PROPERTIES
@@ -365,7 +375,8 @@ const EmailFieldPage = () => {
       >
         <PropsTable data={propsData} />
       </ContentSection>
-            <Divider sx={{ my: 2 }} />
+
+      <Divider sx={{ my: 2 }} />
 
       {/* ==========================================
           RELATED DOCUMENTATION
@@ -375,20 +386,9 @@ const EmailFieldPage = () => {
         id="related-documentation"
         title={relatedDocsContent.title}
       >
-        <ChipGroup
-          title="Components"
-          items={relatedDocsContent.components}
-        />
-
-        <ChipGroup
-          title="Other Fields"
-          items={relatedDocsContent.fields}
-        />
-
-        <ChipGroup
-          title="Advanced Features"
-          items={relatedDocsContent.features}
-        />
+        <ChipGroup title="Components" items={relatedDocsContent.components} />
+        <ChipGroup title="Other Fields" items={relatedDocsContent.fields} />
+        <ChipGroup title="Advanced Features" items={relatedDocsContent.features} />
       </ContentSection>
 
       {/* ==========================================
@@ -399,12 +399,11 @@ const EmailFieldPage = () => {
         id="next-step"
         title={nextStepContent.title}
       >
-        <InfoCallout>
-          {nextStepContent.description}
-        </InfoCallout>
+        <InfoCallout>{nextStepContent.description}</InfoCallout>
       </ContentSection>
     </Box>
   );
 };
 
-export default EmailFieldPage;
+export default TextFieldPage;
+

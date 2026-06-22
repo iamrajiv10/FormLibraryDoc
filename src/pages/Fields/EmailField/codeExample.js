@@ -60,7 +60,6 @@ export const valueSnippet = `{
   label: "Email Address",
   name: "email",
   type: "email",
-  value: "john@example.com"
 }`;
 
 export const valueFullCode = `const formData = [
@@ -68,7 +67,6 @@ export const valueFullCode = `const formData = [
     label: "Email Address",
     name: "email",
     type: "email",
-    value: "john@example.com"
   }
 ];`;
 
@@ -76,7 +74,6 @@ export const disabledSnippet = `{
   label: "Email Address",
   name: "email",
   type: "email",
-  value: "john@example.com",
   disabled: true
 }`;
 
@@ -85,7 +82,6 @@ export const disabledFullCode = `const formData = [
     label: "Email Address",
     name: "email",
     type: "email",
-    value: "john@example.com",
     disabled: true
   }
 ];`;
@@ -254,8 +250,6 @@ export const fullExampleSnippet = `const formData = [
 
     errorMessage: "Please enter your email address.",
 
-    value: "john@example.com",
-
     style: {
       borderRadius: "8px"
     },
@@ -283,8 +277,6 @@ function Example() {
       required: true,
 
       errorMessage: "Please enter your email address.",
-
-      value: "john@example.com",
 
       style: {
         borderRadius: "8px"

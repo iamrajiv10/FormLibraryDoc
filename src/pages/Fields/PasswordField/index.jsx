@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Divider, Typography } from '@mui/material';
 import { Form } from 'formLibrary';
 
 import {
@@ -23,7 +23,6 @@ import {
 
 import {
   basicExampleData,
-  valueExampleData,
   disabledExampleData,
   fullExampleData
 } from './example';
@@ -37,8 +36,6 @@ import {
   requiredFullCode,
   errorMessageSnippet,
   errorMessageFullCode,
-  valueSnippet,
-  valueFullCode,
   disabledSnippet,
   disabledFullCode,
   gridSnippet,
@@ -61,6 +58,7 @@ function PasswordFieldPage() {
         description={overviewContent.description}
         details={overviewContent.details}
       />
+            <Divider sx={{ my: 2 }} />
 
       <ContentSection
         id="basic-example"
@@ -99,6 +97,7 @@ function PasswordFieldPage() {
           disabled states, and conditional rendering.
         </InfoCallout>
       </ContentSection>
+            <Divider sx={{ my: 2 }} />
 
       <ContentSection
         id="properties"
@@ -121,39 +120,6 @@ function PasswordFieldPage() {
         />
 
         <PropertyExample
-          title="value"
-          description="Provide an initial value for the field."
-          snippet={valueSnippet}
-          fullCode={valueFullCode}
-        >
-          <LivePreview>
-            <Box sx={{ width: '100%', maxWidth: 400 }}>
-              <Form data={valueExampleData} />
-            </Box>
-          </LivePreview>
-
-          <Typography
-            variant="subtitle1"
-            sx={{
-              fontWeight: 600,
-              mt: 3,
-              mb: 2
-            }}
-          >
-            Common Use Cases
-          </Typography>
-
-          <BulletList
-            items={[
-              'Edit Profile Forms',
-              'Saved Drafts',
-              'Account Recovery Workflows',
-              'Review Screens'
-            ]}
-          />
-        </PropertyExample>
-
-        <PropertyExample
           title="disabled"
           description="Display the field while preventing modifications."
           snippet={disabledSnippet}
@@ -164,25 +130,6 @@ function PasswordFieldPage() {
               <Form data={disabledExampleData} />
             </Box>
           </LivePreview>
-
-          <Typography
-            variant="subtitle1"
-            sx={{
-              fontWeight: 600,
-              mt: 3,
-              mb: 2
-            }}
-          >
-            Common Examples
-          </Typography>
-
-          <BulletList
-            items={[
-              'Employee Management Systems',
-              'User Profile Pages',
-              'Customer Portals'
-            ]}
-          />
         </PropertyExample>
 
         <PropertyExample
@@ -209,6 +156,7 @@ function PasswordFieldPage() {
           note="This allows labels to align with branding and design requirements."
         />
       </ContentSection>
+            <Divider sx={{ my: 2 }} />
 
       <ContentSection
         id="styling"
@@ -245,6 +193,7 @@ function PasswordFieldPage() {
           fullCode={labelStyleFullCode}
         />
       </ContentSection>
+            <Divider sx={{ my: 2 }} />
 
       <ContentSection
         id="validation"
@@ -269,6 +218,7 @@ function PasswordFieldPage() {
           note="Example: Password is required."
         />
       </ContentSection>
+            <Divider sx={{ my: 2 }} />
 
       <ContentSection
         id="full-example"
@@ -291,8 +241,10 @@ function PasswordFieldPage() {
           responsive layouts, and initial values working together.
         </InfoCallout>
       </ContentSection>
+            <Divider sx={{ my: 2 }} />
 
       <PropsSection data={propsData} />
+            <Divider sx={{ my: 2 }} />
 
       <ContentSection
         id="related-documentation"

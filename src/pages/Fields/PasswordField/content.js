@@ -17,10 +17,6 @@ export const propertiesContent = [
       'Customize the validation message displayed when the field is empty.'
   },
   {
-    title: 'value',
-    description: 'Provide an initial value for the field.'
-  },
-  {
     title: 'disabled',
     description: 'Display the field while preventing modifications.'
   },
