@@ -1,7 +1,8 @@
 import React from 'react';
 import { Box, Divider, Paper, Typography } from '@mui/material';
 
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
+
 
 import {
   PageHeader,

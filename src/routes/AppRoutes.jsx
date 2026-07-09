@@ -14,7 +14,6 @@ import PasswordFieldDoc from '../pages/Fields/PasswordField';
 
 import ConditionalFormPage from '../pages/Features/ConditionalForm';
 import RepeatableGroupDoc from '../pages/Features/RepeatableGroup/RepeatableGroup';
-import GridSystemDoc from '../pages/Features/GridSystem';
 import GridLayoutDoc from '../pages/Features/GridLayout';
 import ValidationDoc from '../pages/Features/Validation/Validation';
 import InitialValuesDoc from '../pages/Features/InitialValues/InitialValues';
@@ -31,6 +30,10 @@ import TixtFieldPage from '../pages/Fields/TaxtField';
 import EmailFieldPage from '../pages/Fields/EmailField';
 import PasswordFieldPage from '../pages/Fields/PasswordField';
 import NumberField from '../pages/Fields/NumberField';
+import ContentField from '../pages/Fields/Content/Content';
+import MultiSelectPage from '../pages/Fields/MultiSelect/MultiSelect';
+
+
 import TextareaField from '../pages/Fields/TextAreaField';
 import RadioGroup from '../pages/Fields/RadioGroup';
 import CheckboxField from '../pages/Fields/Checkbox/Checkbox';
@@ -67,6 +70,10 @@ const AppRoutes = ({ toggleTheme, mode }) => {
         <Route path="fields/email-field" element={<EmailFieldPage />} />
         <Route path="fields/password-field" element={<PasswordFieldPage />} />
         <Route path="fields/number-field" element={<NumberField />} />
+        <Route path="fields/multiselect" element={<MultiSelectPage />} />
+        <Route path="fields/content-field" element={<ContentField />} />
+
+
         <Route path="fields/textarea-field" element={<TextareaField />} />
         <Route path="fields/radiogroup-field" element={<RadioGroup />} />
         <Route path="fields/checkbox-field" element={<CheckboxField />} />

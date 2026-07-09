@@ -1,4 +1,5 @@
-export const basicDisabledFieldsFullCode = `import { Form } from "formLibrary";
+export const basicDisabledFieldsFullCode = `import { Form } from 'skemvora';
+
 
 export default function Example() {
   const formData = [
@@ -22,7 +23,8 @@ export default function Example() {
   );
 }`;
 
-export const disabledWithInitialValuesFullCode = `import { Form } from "formLibrary";
+export const disabledWithInitialValuesFullCode = `import { Form } from 'skemvora';
+
 
 export default function Example() {
   const formData = [
@@ -46,7 +48,8 @@ export default function Example() {
   );
 }`;
 
-export const disabledWithConditionalFormFullCode = `import { ConditionalForm } from "formLibrary";
+export const disabledWithConditionalFormFullCode = `import { ConditionalForm} from 'skemvora';
+
 
 export default function Example() {
   const initialValues = {
@@ -87,7 +90,8 @@ export default function Example() {
   );
 }`;
 
-export const differentTypesDisabledFullCode = `import { Form } from "formLibrary";
+export const differentTypesDisabledFullCode = `import { Form } from 'skemvora';
+
 
 export default function Example() {
   const formData = [
@@ -101,7 +105,8 @@ export default function Example() {
   return <Form data={formData} />;
 }`;
 
-export const fullDisabledFieldsFullCode = `import { Form } from "formLibrary";
+export const fullDisabledFieldsFullCode = `import { Form } from 'skemvora';
+
 
 export default function Example() {
   const formData = [

@@ -1,6 +1,7 @@
 // Full code used in the documentation CodeBlock components
 
-export const basicResponsiveFullCode = `import { Form } from "formLibrary";
+export const basicResponsiveFullCode = `import { Form } from 'skemvora';
+
 
 const formData = [
   {
@@ -37,7 +38,8 @@ export default function ResponsiveLayoutBasicExample() {
 }`;
 
 export const conditionalFormResponsiveFullCode = `import React from "react";
-import { Form } from "formLibrary";
+import { Form } from 'skemvora';
+
 
 const formData = [
   {
@@ -73,7 +75,8 @@ export default function ResponsiveWithConditionalForm() {
 }`;
 
 export const repeatableGroupResponsiveFullCode = `import React from "react";
-import { Form } from "formLibrary";
+import { Form } from 'skemvora';
+
 
 const formData = [
   {
@@ -98,7 +101,8 @@ export default function ResponsiveWithRepeatableGroup() {
   return <Form data={formData} />;
 }`;
 
-export const fullResponsiveExampleFullCode = `import { Form } from "formLibrary";
+export const fullResponsiveExampleFullCode = `import { Form } from 'skemvora';
+
 
 const formData = [
   {

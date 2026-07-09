@@ -1,5 +1,5 @@
 import { Box, Divider, Typography } from '@mui/material';
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
 
 import {
   PageHeader,
@@ -28,7 +28,11 @@ import {
   gridExampleData,
   styleExampleData,
   labelStyleExampleData,
-  fullExampleData
+  fullExampleData,
+  prefixExampleData,
+  suffixExampleData,
+  maxDigitExampleData,
+  precisionExampleData
 } from './example';
 
 import {
@@ -51,7 +55,15 @@ import {
   validationSnippet,
   validationMessageSnippet,
   fullExampleSnippet,
-  fullExampleCode
+  fullExampleCode,
+  prefixSnippet,
+  prefixFullCode,
+  suffixSnippet,
+  suffixFullCode,
+  maxDigitSnippet,
+  maxDigitFullCode,
+  precisionSnippet,
+  precisionFullCode
 } from './codeExample';
 
 import { propsData } from './props';
@@ -117,11 +129,9 @@ function NumberField() {
           previewData={requiredExampleData}
           snippet={requiredSnippet}
           fullCode={requiredFullCode}
+          note='Default validation message: This is a required field.'
         >
         </PropertyExample>
-        <InfoCallout>
-                  Default validation message: This is a required field.
-                </InfoCallout>
             <Divider sx={{ my: 2 }} />
 
         <PropertyExample
@@ -130,11 +140,9 @@ function NumberField() {
           previewData={errorMessageExampleData}
           snippet={errorMessageSnippet}
           fullCode={errorMessageFullCode}
+          note='Example: Please enter you age.'
         >
         </PropertyExample>
-        <InfoCallout>
-          Example: Please enter you age.
-        </InfoCallout>
                     <Divider sx={{ my: 2 }} />
 
         <PropertyExample
@@ -169,6 +177,40 @@ function NumberField() {
           previewData={labelStyleExampleData}
           snippet={labelStyleSnippet}
           fullCode={labelStyleFullCode}
+        />
+
+        <PropertyExample
+          title="prefix"
+          description="Adds a static value before the number input."
+          previewData={prefixExampleData}
+          snippet={prefixSnippet}
+          fullCode={prefixFullCode}
+        />
+
+        <PropertyExample
+          title="suffix"
+          description="Adds a static value after the number input."
+          previewData={suffixExampleData}
+          snippet={suffixSnippet}
+          fullCode={suffixFullCode}
+        />
+
+        <PropertyExample
+          title="maxDigits"
+          description="Defines the maximum number of digits allowed in the number field."
+          previewData={maxDigitExampleData}
+          snippet={maxDigitSnippet}
+          fullCode={maxDigitFullCode}
+          note={'The user can enter up to 10 digits only.'}
+        />
+
+        <PropertyExample
+          title="precision"
+          description="Controls the number of decimal places allowed in the value."
+          previewData={precisionExampleData}
+          snippet={precisionSnippet}
+          fullCode={precisionFullCode}
+          note={'Allowed: 100.25  . Use "0" if do not want decimal value.'}
         />
       </ContentSection>
             <Divider sx={{ my: 2 }} />

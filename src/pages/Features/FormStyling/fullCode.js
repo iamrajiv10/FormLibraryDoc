@@ -2,7 +2,8 @@
 
 export const basicStylingFullCode = `
 import React from 'react';
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
+
 
 const formData = [
   { label: 'Name', name: 'name', type: 'text' },
@@ -29,7 +30,8 @@ export default function Example() {
 
 export const fullExampleFullCode = `
 import React from 'react';
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
+
 
 const formData = [
   {

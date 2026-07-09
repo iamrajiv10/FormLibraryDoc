@@ -15,7 +15,25 @@ export const propsData = [
     property: 'type',
     type: 'string',
     required: 'Yes',
-    description: 'Must be "text"'
+    description: 'Must be "multiselect"'
+  },
+  {
+    property: 'options',
+    type: 'array',
+    required: 'Yes',
+    description: 'Available selectable values'
+  },
+  {
+    property: 'searchable',
+    type: 'boolean',
+    required: 'No',
+    description: 'Enables search functionality'
+  },
+  {
+    property: 'maxSelection',
+    type: 'number',
+    required: 'No',
+    description: 'Limits maximum number of selected values'
   },
   {
     property: 'required',
@@ -27,25 +45,13 @@ export const propsData = [
     property: 'errorMessage',
     type: 'string',
     required: 'No',
-    description: 'Custom validation message'
+    description: 'Custom validation error message'
   },
   {
     property: 'disabled',
     type: 'boolean',
     required: 'No',
-    description: 'Disables field interaction'
-  },
-  {
-    property: 'prefix',
-    type: 'string',
-    required: 'No',
-    description: 'Displays content before input value'
-  },
-  {
-    property: 'suffix',
-    type: 'string',
-    required: 'No',
-    description: 'Displays content after input value'
+    description: 'Disables user interaction'
   },
   {
     property: 'grid',

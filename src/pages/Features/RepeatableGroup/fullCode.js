@@ -2,7 +2,8 @@
 
 export const basicRepeatableFullCode = `
 import React from 'react';
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
+
 
 const formData = [
   {
@@ -24,7 +25,8 @@ export default function RepeatableGroupBasicExample() {
 
 export const repeatableUsageFullCode = `
 import React from 'react';
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
+
 
 const formData = [
   {
@@ -52,7 +54,8 @@ export const howItWorksFullCode = `
 
 export const addButtonPositionFullCode = `
 import React from 'react';
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
+
 
 const formData = [
   {
@@ -75,7 +78,8 @@ export default function RepeatableGroupAddPosition() {
 
 export const deleteButtonPositionFullCode = `
 import React from 'react';
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
+
 
 const formData = [
   {
@@ -98,7 +102,8 @@ export default function RepeatableGroupDeletePosition() {
 
 export const gridLayoutFullCode = `
 import React from 'react';
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
+
 
 const formData = [
   {
@@ -129,7 +134,8 @@ export default function RepeatableGroupGridLayout() {
 
 export const validationFullCode = `
 import React from 'react';
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
+
 
 const formData = [
   {
@@ -155,7 +161,8 @@ export default function RepeatableGroupValidation() {
 
 export const initialValuesFullCode = `
 import React from 'react';
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
+
 
 const formData = [
   {
@@ -186,7 +193,8 @@ export default function RepeatableGroupInitialValues() {
 
 export const conditionalRenderingFullCode = `
 import React from 'react';
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
+
 
 const formData = [
   {
@@ -214,7 +222,8 @@ export default function RepeatableGroupConditionalRendering() {
 
 export const fullExampleFullCode = `
 import React from 'react';
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
+
 
 const repeatableFormData = [
   {

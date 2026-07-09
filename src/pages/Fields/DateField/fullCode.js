@@ -1,4 +1,5 @@
-export const fullExampleFullCode = `import { Form } from "formLibrary";
+export const fullExampleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData=[

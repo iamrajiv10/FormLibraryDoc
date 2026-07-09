@@ -2,7 +2,8 @@
 
 export const fullBasicButtonsFullCode = `
 import React from 'react';
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
+
 
 const formData = [
   { label: 'Name', name: 'name', type: 'text' },
@@ -34,7 +35,8 @@ export default function ButtonConfigurationExample() {
 
 export const fullExampleFullCode = `
 import React from 'react';
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
+
 
 const formData = [
   { label: 'Name', name: 'name', type: 'text' },

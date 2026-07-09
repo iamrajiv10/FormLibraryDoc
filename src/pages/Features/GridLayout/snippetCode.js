@@ -21,7 +21,8 @@ export const gridLayoutBasicSnippet = `const gridFormData = [
 
 <Form data={gridFormData} />`;
 
-export const gridLayoutBasicFullCode = `import { Form } from "formLibrary";
+export const gridLayoutBasicFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const gridFormData = [
@@ -102,7 +103,8 @@ export const gridLayoutFullSnippet = `const formData = [
 
 <Form data={formData} />`;
 
-export const gridLayoutFullFullCode = `import { Form } from "formLibrary";
+export const gridLayoutFullFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [

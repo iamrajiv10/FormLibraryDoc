@@ -7,7 +7,8 @@ export const basicExampleSnippet = `const formData = [
  } 
 ];`;
 
-export const basicExampleFullCode = `import { Form } from "formLibrary";
+export const basicExampleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -301,7 +302,8 @@ export const fullExampleSnippet = `const formData = [
   }
 ];`;
 
-export const fullExampleFullCode = `import { Form } from "formLibrary";
+export const fullExampleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [

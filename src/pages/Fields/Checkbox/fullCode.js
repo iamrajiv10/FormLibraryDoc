@@ -1,4 +1,5 @@
-import { Form } from "formLibrary";
+import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [

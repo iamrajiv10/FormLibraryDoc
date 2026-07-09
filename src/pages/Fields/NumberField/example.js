@@ -72,6 +72,42 @@ export const labelStyleExampleData = [
   }
 ];
 
+export const prefixExampleData = [
+  {
+    label:"Price",
+    name:"price",
+    type:"number",
+    prefix:"₹"
+  }
+];
+
+export const suffixExampleData = [
+  {
+    label:"Discount",
+    name:"discount",
+    type:"number",
+    suffix:"%"
+  }
+]
+
+export const maxDigitExampleData = [
+  {
+ label:"Account Number",
+ name:"accountNumber",
+ type:"number",
+ maxDigits:10
+}
+]
+
+export const precisionExampleData = [
+  {
+ label:"Amount",
+ name:"amount",
+ type:"number",
+ precision:2
+}
+]
+
 export const fullExampleData = [
   {
     label: 'Years of Experience',
@@ -79,6 +115,7 @@ export const fullExampleData = [
     type: 'number',
     required: true,
     errorMessage: 'Please enter your years of experience.',
+    maxDigits: 2,
     style: {
       borderRadius: '8px'
     },

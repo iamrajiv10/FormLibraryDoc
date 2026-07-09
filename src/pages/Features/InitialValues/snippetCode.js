@@ -9,7 +9,8 @@ export const basicExampleSnippet = `const initialValues = {
   initialValues={initialValues}
 />`;
 
-export const basicExampleFullCode = `import { Form } from "formLibrary";
+export const basicExampleFullCode = `import { Form } from 'skemvora';
+
 
 export default function Example() {
   const formData = [
@@ -42,7 +43,8 @@ export const conditionalExampleSnippet = `const initialValues = {
   initialValues={initialValues}
 />`;
 
-export const conditionalExampleFullCode = `import { ConditionalForm } from "formLibrary";
+export const conditionalExampleFullCode = `import { ConditionalForm} from 'skemvora';
+
 
 export default function Example() {
   const formData = [
@@ -90,7 +92,8 @@ export const fullExampleSnippet = `const initialValues = {
   initialValues={initialValues}
 />`;
 
-export const fullExampleFullCode = `import { Form } from "formLibrary";
+export const fullExampleFullCode = `import { Form } from 'skemvora';
+
 
 export default function Example() {
   const formData = [

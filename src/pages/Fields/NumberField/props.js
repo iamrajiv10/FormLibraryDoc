@@ -36,6 +36,30 @@ export const propsData = [
     description: 'Disables editing'
   },
   {
+    property: 'prefix',
+    type: 'string',
+    required: 'No',
+    description: 'Displays content before number value'
+  },
+  {
+    property: 'suffix',
+    type: 'string',
+    required: 'No',
+    description: 'Displays content after number value'
+  },
+  {
+    property: 'maxDigits',
+    type: 'number',
+    required: 'No',
+    description: 'Limits maximum digits allowed'
+  },
+  {
+    property: 'precision',
+    type: 'number',
+    required: 'No',
+    description: 'controls decimal places'
+  },
+  {
     property: 'style',
     type: 'object',
     required: 'No',

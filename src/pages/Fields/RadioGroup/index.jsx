@@ -1,5 +1,6 @@
 import { Box, Divider } from '@mui/material';
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
+
 
 import {
   PageHeader,
@@ -271,7 +272,8 @@ const RadioGroup = () => {
     marginTop: "10px"
   }
 }`}
-          fullCode={`import { Form } from "formLibrary";
+          fullCode={`import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -309,7 +311,8 @@ export default Example;`}
     fontWeight: "bold"
   }
 }`}
-          fullCode={`import { Form } from "formLibrary";
+          fullCode={`import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -360,7 +363,8 @@ export default Example;`}
 
   required: true
 }`}
-          fullCode={`import { Form } from "formLibrary";
+          fullCode={`import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -400,7 +404,8 @@ export default Example;`}
 
   errorMessage: "Please select a plan."
 }`}
-          fullCode={`import { Form } from "formLibrary";
+          fullCode={`import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [

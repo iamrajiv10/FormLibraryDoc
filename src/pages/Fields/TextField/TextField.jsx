@@ -1,5 +1,6 @@
 import { Box, Divider, Typography } from '@mui/material';
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
+
 
 import {
   PageHeader,
@@ -61,6 +62,12 @@ import {
 
   labelStyleSnippet,
   labelStyleFullCode,
+
+  prefixSnippet,
+  prefixFullCode,
+
+  suffixSnippet,
+  suffixFullCode,
 
   validationSnippet,
   validationFullCode,
@@ -250,7 +257,40 @@ const TextFieldPage = () => {
           snippet={labelStyleSnippet}
           fullCode={labelStyleFullCode}
         />
+
+
+        <Typography variant="h5" sx={{ fontWeight: 600, mt: 5, mb: 2 }}>
+          Prefix
+        </Typography>
+
+        <ContentBlock>
+          Adds a static value before the input field content.<br />
+          It is useful when the field needs a fixed indicator or symbol before the entered value.
+        </ContentBlock>
+
+        <CodeBlock
+          language="jsx"
+          snippet={prefixSnippet}
+          fullCode={prefixFullCode}
+        />
+
+        <Typography variant="h5" sx={{ fontWeight: 600, mt: 5, mb: 2 }}>
+          Suffix
+        </Typography>
+
+        <ContentBlock>
+          Adds a static value after the input field content.<br />
+          It is useful when the field needs additional information after the entered value.
+        </ContentBlock>
+
+        <CodeBlock
+          language="jsx"
+          snippet={suffixSnippet}
+          fullCode={suffixFullCode}
+        />
       </ContentSection>
+
+
 
       <Divider sx={{ my: 2 }} />
 

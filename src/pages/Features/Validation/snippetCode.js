@@ -16,7 +16,8 @@ export const basicSnippet = `const validationFormData = [
 
 <Form data={validationFormData} />`;
 
-export const basicFullCode = `import { Form } from 'formLibrary';
+export const basicFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const validationFormData = [
@@ -106,7 +107,8 @@ export const conditionalSnippet = `const formData = [
 
 <ConditionalForm data={formData} />`;
 
-export const conditionalFullCode = `import { ConditionalForm } from 'formLibrary';
+export const conditionalFullCode = `import { ConditionalForm} from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -236,7 +238,8 @@ export const fullExampleSnippet = `const formData = [
 
 <Form data={formData} />`;
 
-export const fullExampleFullCode = `import { Form } from 'formLibrary';
+export const fullExampleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [

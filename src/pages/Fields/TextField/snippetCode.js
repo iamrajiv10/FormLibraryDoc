@@ -6,7 +6,8 @@ export const basicExampleSnippet = `const formData = [
   }
 ];`;
 
-export const basicExampleFullCode = `import { Form } from "formLibrary";
+export const basicExampleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -94,7 +95,8 @@ export const initialValuesSnippet = `const initialValues = {
 
 <Form data={formData} initialValues={initialValues} />;`;
 
-export const initialValuesFullCode = `import { Form } from "formLibrary";
+export const initialValuesFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -176,6 +178,38 @@ export const labelStyleFullCode = `const formData = [
   }
 ];`;
 
+export const prefixSnippet = `{
+  label: "Full Name",
+  name: "fullName",
+  type: "text",
+  prefix:"@"
+}`;
+
+export const prefixFullCode = `const formData = [
+  {
+    label: "Full Name",
+    name: "fullName",
+    type: "text",
+    prefix:"@"
+  }
+];`;
+
+export const suffixSnippet = `{
+  label:"Website",
+  name:"website",
+  type:"text",
+  suffix:".com"
+}`;
+
+export const suffixFullCode = `const formData = [
+  {
+    label:"Website",
+    name:"website",
+    type:"text",
+    suffix:".com"
+  }
+];`;
+
 export const validationSnippet = `{
   label: "Full Name",
   name: "fullName",
@@ -237,7 +271,8 @@ export const fullExampleSnippet = `const formData = [
   }
 ];`;
 
-export const fullExampleFullCode = `import { Form } from "formLibrary";
+export const fullExampleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
