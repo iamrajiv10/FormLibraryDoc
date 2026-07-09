@@ -9,8 +9,7 @@ import {
   TableRow,
   Typography
 } from '@mui/material';
-
-import { ConditionalForm } from 'formLibrary';
+import { ConditionalForm } from 'skemvora';
 
 import LivePreview from '../../../components/LivePreview/LivePreview';
 import CodeBlock from '../../../components/CodeBlock/CodeBlock';
@@ -80,7 +79,7 @@ import {
   operatorsData
 } from './props';
 
-const ConditionalFormPage = () => {
+const ConditionalFormComponent = () => {
   return (
     <Box
       sx={{
@@ -579,4 +578,4 @@ const ConditionalFormPage = () => {
   );
 };
 
-export default ConditionalFormPage;
+export default ConditionalFormComponent;

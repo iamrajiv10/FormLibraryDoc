@@ -2,7 +2,8 @@
    IMPORT
 ========================================== */
 
-export const importSnippet = `import { ConditionalForm } from "formLibrary";`;
+export const importSnippet = `import { ConditionalForm} from 'skemvora';
+`;
 
 export const importFullCode = importSnippet;
 

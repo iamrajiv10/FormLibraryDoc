@@ -1,4 +1,5 @@
-export const importSnippet = `import { Form } from "formLibrary";`;
+export const importSnippet = `import { Form } from 'skemvora';
+`;
 
 export const importFullCode = importSnippet;
 

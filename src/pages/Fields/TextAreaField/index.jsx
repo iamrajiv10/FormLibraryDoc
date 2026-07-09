@@ -1,5 +1,6 @@
-import { Box, Typography, Grid } from '@mui/material';
-import { Form } from 'formLibrary';
+import { Box, Typography, Grid, Divider } from '@mui/material';
+import { Form } from 'skemvora';
+
 
 import {
   PageHeader,
@@ -8,7 +9,8 @@ import {
   RelatedSection,
   NextStepCard,
   FeatureCard,
-  ContentSection
+  ContentSection,
+  ChipGroup
 } from '../../../components/Customs';
 
 import CodeBlock from '../../../components/CodeBlock/CodeBlock';
@@ -47,11 +49,12 @@ import LivePreview from '../../../components/LivePreview/LivePreview';
 
 const TextareaField = () => {
   return (
-    <>
+    <Box sx={{ pb: 8, maxWidth: '1000px', mx: 'auto' }}>
       <PageHeader
         title="Textarea Field"
         description="The Textarea Field is used to collect multi-line text input from users."
       />
+            <Divider sx={{ my: 2 }} />
 
       <ContentSection id="basic-example" title="Basic Example">
         <Typography color="text.secondary" sx={{ mb: 3 }}>
@@ -78,6 +81,8 @@ const TextareaField = () => {
           rendering.
         </InfoCallout>
       </ContentSection>
+            <Divider sx={{ my: 2 }} />
+
 
       <ContentSection id="properties" title="Properties">
         <PropertyExample
@@ -93,6 +98,7 @@ const TextareaField = () => {
           displays the default validation message:
           <strong> This is a required field.</strong>
         </InfoCallout>
+        <Box sx={{ mb: 5 }}></Box>
 
         <PropertyExample
           title="errorMessage"
@@ -100,11 +106,14 @@ const TextareaField = () => {
           data={errorMessageExampleData}
           snippet={errorMessageSnippet}
           fullCode={errorMessageFullCode}
+          
         />
 
         <InfoCallout>
           Use custom error messages to provide more meaningful feedback to users.
         </InfoCallout>
+        <Box sx={{ mb: 5 }}></Box>
+
 
         <PropertyExample
           title="disabled"
@@ -117,6 +126,8 @@ const TextareaField = () => {
         <InfoCallout>
           Disabled fields remain visible but cannot be modified.
         </InfoCallout>
+        <Box sx={{ mb: 5 }}></Box>
+
 
         <PropertyExample
           title="style"
@@ -129,6 +140,8 @@ const TextareaField = () => {
         <InfoCallout>
           Field-level styles override global form styling.
         </InfoCallout>
+        <Box sx={{ mb: 5 }}></Box>
+
 
         <PropertyExample
           title="labelStyle"
@@ -142,6 +155,8 @@ const TextareaField = () => {
           Label styling is useful for branding and design consistency.
         </InfoCallout>
       </ContentSection>
+
+                  <Divider sx={{ my: 2 }} />
 
       <ContentSection id="textarea-behavior" title="Textarea Behavior">
         <Typography paragraph>
@@ -161,6 +176,7 @@ const TextareaField = () => {
           <li>Additional Notes</li>
         </ul>
       </ContentSection>
+                  <Divider sx={{ my: 2 }} />
 
       <ContentSection id="validation" title="Validation">
         <PropertyExample
@@ -176,6 +192,7 @@ const TextareaField = () => {
           textarea fields are empty.
         </InfoCallout>
       </ContentSection>
+                  <Divider sx={{ my: 2 }} />
 
       <ContentSection id="full-example" title="Full Example">
         <LivePreview>
@@ -196,43 +213,42 @@ const TextareaField = () => {
         </InfoCallout>
       </ContentSection>
 
+            <Divider sx={{ my: 2 }} />
+
+
       <ContentSection id="supported-properties" title="Supported Properties">
-        <PropsTable rows={textareaFieldProps} />
+        <PropsTable data={textareaFieldProps} />
       </ContentSection>
 
-      <RelatedSection
-        id="related-documentation"
-        title="Related Documentation"
-      >
-        <Grid container spacing={3}>
-          <Grid size={{ xs: 12, md: 4 }}>
-            <FeatureCard
-              title="Components"
-              items={relatedDocs.components}
-            />
-          </Grid>
+            <Divider sx={{ my: 2 }} />
 
-          <Grid size={{ xs: 12, md: 4 }}>
-            <FeatureCard
-              title="Other Fields"
-              items={relatedDocs.fields}
-            />
-          </Grid>
 
-          <Grid size={{ xs: 12, md: 4 }}>
-            <FeatureCard
-              title="Advanced Features"
-              items={relatedDocs.features}
-            />
-          </Grid>
-        </Grid>
-      </RelatedSection>
+<ContentSection
+                id="related-documentation"
+                title={relatedDocs.title}
+            >
+                <ChipGroup
+                    title="Components"
+                    items={relatedDocs.components}
+                />
 
-      <NextStepCard
+                <ChipGroup
+                    title="Other Fields"
+                    items={relatedDocs.fields}
+                />
+
+                <ChipGroup
+                    title="Advanced Features"
+                    items={relatedDocs.features}
+                />
+            </ContentSection>
+
+
+      {/* <NextStepCard
         title="Radio Group"
         description="Learn how Form Library handles single-selection fields with multiple options."
-      />
-    </>
+      /> */}
+    </Box>
   );
 };
 

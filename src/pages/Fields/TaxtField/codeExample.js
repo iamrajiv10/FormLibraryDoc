@@ -10,7 +10,8 @@ export const example1Snippet = `const formData = [
   }
 ];`;
 
-export const example1FullCode = `import { Form } from "formLibrary";
+export const example1FullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -39,7 +40,8 @@ export const example2Snippet = `const formData = [
   }
 ];`;
 
-export const example2FullCode = `import { Form } from "formLibrary";
+export const example2FullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -70,7 +72,8 @@ export const example3Snippet = `const formData = [
   }
 ];`;
 
-export const example3FullCode = `import { Form } from "formLibrary";
+export const example3FullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -101,7 +104,8 @@ export const example4Snippet = `const formData = [
   }
 ];`;
 
-export const example4FullCode = `import { Form } from "formLibrary";
+export const example4FullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -132,7 +136,8 @@ export const example5Snippet = `const formData = [
   }
 ];`;
 
-export const example5FullCode = `import { Form } from "formLibrary";
+export const example5FullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -167,7 +172,8 @@ export const example6Snippet = `const formData = [
   }
 ];`;
 
-export const example6FullCode = `import { Form } from "formLibrary";
+export const example6FullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -205,7 +211,8 @@ export const example7Snippet = `const formData = [
   }
 ];`;
 
-export const example7FullCode = `import { Form } from "formLibrary";
+export const example7FullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -250,7 +257,8 @@ export const example8Snippet = `const formData = [
   }
 ];`;
 
-export const example8FullCode = `import { Form } from "formLibrary";
+export const example8FullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -297,7 +305,8 @@ export const example9Snippet = `const formData = [
   }
 ];`;
 
-export const example9FullCode = `import { Form } from "formLibrary";
+export const example9FullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [

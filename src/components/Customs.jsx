@@ -19,7 +19,8 @@ import {
   Typography
 } from '@mui/material';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
+
 import LivePreview from './LivePreview/LivePreview';
 import CodeBlock from './CodeBlock/CodeBlock';
 
@@ -525,7 +526,7 @@ export const PropertyExample = ({
   fullCode,
   note,
   previewData,
-  previewWidth = 400,
+  previewWidth = '100%',
   children
 }) => (
   <Box sx={{ mb: 5 }}>
@@ -545,6 +546,8 @@ export const PropertyExample = ({
       </ContentBlock>
     )}
 
+    {children}
+
     {previewData && (
       <LivePreview>
         <Box
@@ -557,8 +560,6 @@ export const PropertyExample = ({
         </Box>
       </LivePreview>
     )}
-
-    {children}
 
     <CodeBlock
       language="jsx"

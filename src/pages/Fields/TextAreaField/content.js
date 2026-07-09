@@ -56,6 +56,7 @@ export const supportedProperties = [
 ];
 
 export const relatedDocs = {
+  title: 'Related Documentation',
   components: ['Form', 'ConditionalForm'],
   fields: [
     'Text Field',
@@ -70,4 +71,10 @@ export const relatedDocs = {
     'Disabled Fields',
     'Field Styling'
   ]
+};
+
+export const nextStepContent = {
+  title: 'Next Step',
+  description:
+    'Continue to the Password Field documentation to learn how Form Library handles secure password inputs and authentication-related forms.'
 };

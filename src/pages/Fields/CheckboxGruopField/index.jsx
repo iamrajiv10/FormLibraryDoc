@@ -1,5 +1,6 @@
-import { Box, Typography } from '@mui/material';
-import { Form } from 'formLibrary';
+import { Box, Divider, Typography } from '@mui/material';
+import { Form } from 'skemvora';
+
 
 import {
   PageHeader,
@@ -7,7 +8,8 @@ import {
   BulletList,
   PropsSection,
   PropertyExample,
-  ChipGroup
+  ChipGroup,
+  InfoCallout
 } from '../../../components/Customs';
 
 import { pageContent, checkboxGroupProps, commonUseCases, relatedDocs } from './content';
@@ -40,11 +42,13 @@ import CodeBlock from '../../../components/CodeBlock/CodeBlock';
 
 const CheckboxGroupField = () => {
   return (
-    <Box>
+    <Box sx={{ pb: 8, maxWidth: '1000px', mx: 'auto' }}>
       <PageHeader
         title={pageContent.title}
-        description={pageContent.description}
+        details={pageContent.description}
       />
+                  <Divider sx={{ my: 2 }} />
+
 
       {/* -------------------------------- */}
       {/* Basic Example */}
@@ -78,6 +82,7 @@ const CheckboxGroupField = () => {
           fullCode={basicFullCode}
         />
       </ContentSection>
+            <Divider sx={{ my: 2 }} />
 
       {/* -------------------------------- */}
       {/* Properties */}
@@ -87,7 +92,6 @@ const CheckboxGroupField = () => {
         id="properties"
         title="Properties"
       >
-        <PropsSection props={checkboxGroupProps} />
       </ContentSection>
 
       {/* -------------------------------- */}
@@ -98,18 +102,14 @@ const CheckboxGroupField = () => {
         id="options"
         title="options"
         description="Defines the list of options displayed inside the checkbox group."
+        snippet={basicSnippet}
+          fullCode={basicFullCode}
       >
         <LivePreview>
           <Box sx={{ width: '100%', maxWidth: 500 }}>
             <Form data={basicExampleData} />
           </Box>
         </LivePreview>
-
-        <CodeBlock
-          language="jsx"
-          snippet={basicSnippet}
-          fullCode={basicFullCode}
-        />
       </PropertyExample>
 
       {/* -------------------------------- */}
@@ -120,27 +120,15 @@ const CheckboxGroupField = () => {
         id="required"
         title="required"
         description="Marks the checkbox group as mandatory."
+        snippet={requiredSnippet}
+          fullCode={requiredFullCode}
+        note='Default error message: This is a required field.'
       >
         <LivePreview>
           <Box sx={{ width: '100%', maxWidth: 500 }}>
             <Form data={requiredExampleData} />
           </Box>
         </LivePreview>
-
-        <CodeBlock
-          language="jsx"
-          snippet={requiredSnippet}
-          fullCode={requiredFullCode}
-        />
-
-        <Typography sx={{ mt: 2 }}>
-          Default error message:
-        </Typography>
-
-        <CodeBlock
-          language="text"
-          snippet="This is a required field."
-        />
       </PropertyExample>
 
       {/* -------------------------------- */}
@@ -151,18 +139,14 @@ const CheckboxGroupField = () => {
         id="error-message"
         title="errorMessage"
         description="Customize the validation message displayed when no option is selected."
+        snippet={errorMessageSnippet}
+          fullCode={errorMessageFullCode}
       >
         <LivePreview>
           <Box sx={{ width: '100%', maxWidth: 500 }}>
             <Form data={errorMessageExampleData} />
           </Box>
         </LivePreview>
-
-        <CodeBlock
-          language="jsx"
-          snippet={errorMessageSnippet}
-          fullCode={errorMessageFullCode}
-        />
       </PropertyExample>
 
       {/* -------------------------------- */}
@@ -173,18 +157,14 @@ const CheckboxGroupField = () => {
         id="disabled"
         title="disabled"
         description="Display the checkbox group while preventing changes."
-      >
+      snippet={disabledSnippet}
+          fullCode={disabledFullCode}
+          >
         <LivePreview>
           <Box sx={{ width: '100%', maxWidth: 500 }}>
             <Form data={disabledExampleData} />
           </Box>
         </LivePreview>
-
-        <CodeBlock
-          language="jsx"
-          snippet={disabledSnippet}
-          fullCode={disabledFullCode}
-        />
       </PropertyExample>
 
       {/* -------------------------------- */}
@@ -195,18 +175,14 @@ const CheckboxGroupField = () => {
         id="style"
         title="style"
         description="Apply custom styling directly to the checkbox group field."
-      >
+      snippet={styleSnippet}
+          fullCode={styleFullCode}
+          >
         <LivePreview>
           <Box sx={{ width: '100%', maxWidth: 500 }}>
             <Form data={styleExampleData} />
           </Box>
         </LivePreview>
-
-        <CodeBlock
-          language="jsx"
-          snippet={styleSnippet}
-          fullCode={styleFullCode}
-        />
       </PropertyExample>
 
       {/* -------------------------------- */}
@@ -217,19 +193,17 @@ const CheckboxGroupField = () => {
         id="label-style"
         title="labelStyle"
         description="Apply styling to the checkbox group label."
+        snippet={labelStyleSnippet}
+          fullCode={labelStyleFullCode}
       >
         <LivePreview>
           <Box sx={{ width: '100%', maxWidth: 500 }}>
             <Form data={labelStyleExampleData} />
           </Box>
         </LivePreview>
-
-        <CodeBlock
-          language="jsx"
-          snippet={labelStyleSnippet}
-          fullCode={labelStyleFullCode}
-        />
       </PropertyExample>
+
+            <Divider sx={{ my: 2 }} />
 
             {/* -------------------------------- */}
       {/* Selection Behavior */}
@@ -264,6 +238,7 @@ const CheckboxGroupField = () => {
           Users can select any combination of these options.
         </Typography>
       </ContentSection>
+            <Divider sx={{ my: 2 }} />
 
       {/* -------------------------------- */}
       {/* Conditional Rendering Support */}
@@ -296,6 +271,7 @@ const CheckboxGroupField = () => {
           building dynamic workflows.
         </Typography>
       </ContentSection>
+            <Divider sx={{ my: 2 }} />
 
       {/* -------------------------------- */}
       {/* Styling */}
@@ -310,7 +286,7 @@ const CheckboxGroupField = () => {
           styling.
         </Typography>
 
-        <Typography variant="h6" sx={{ mt: 3, mb: 2 }}>
+        <Typography variant="h6"  sx={{ mt: 3, mb: 2, fontWeight:"700" }}>
           Field Styling Example
         </Typography>
 
@@ -326,7 +302,7 @@ const CheckboxGroupField = () => {
           fullCode={styleFullCode}
         />
 
-        <Typography variant="h6" sx={{ mt: 4, mb: 2 }}>
+        <Typography variant="h6" sx={{ mt: 4, mb: 2, fontWeight:"700" }}>
           Label Styling Example
         </Typography>
 
@@ -342,11 +318,11 @@ const CheckboxGroupField = () => {
           fullCode={labelStyleFullCode}
         />
 
-        <Typography sx={{ mt: 2 }}>
+        <InfoCallout >
           Field-level styles override global form styles.
-        </Typography>
+        </InfoCallout>
       </ContentSection>
-
+<Divider sx={{ my: 2 }} />
       {/* -------------------------------- */}
       {/* Validation */}
       {/* -------------------------------- */}
@@ -359,7 +335,7 @@ const CheckboxGroupField = () => {
           Checkbox Group supports Form Library&apos;s built-in validation system.
         </Typography>
 
-        <Typography variant="h6" sx={{ mt: 3, mb: 2 }}>
+        <Typography variant="h6" sx={{ mt: 3, mb: 2, fontWeight:"700" }}>
           Required Validation
         </Typography>
 
@@ -375,7 +351,7 @@ const CheckboxGroupField = () => {
           fullCode={requiredFullCode}
         />
 
-        <Typography variant="h6" sx={{ mt: 4, mb: 2 }}>
+        <Typography variant="h6" sx={{ mt: 4, mb: 2, fontWeight:"700" }}>
           Custom Validation Message
         </Typography>
 
@@ -391,28 +367,14 @@ const CheckboxGroupField = () => {
           fullCode={errorMessageFullCode}
         />
       </ContentSection>
-
-      {/* -------------------------------- */}
-      {/* Common Use Cases */}
-      {/* -------------------------------- */}
-
-      <ContentSection
-        id="common-use-cases"
-        title="Common Use Cases"
-      >
-        <ChipGroup items={commonUseCases} />
-      </ContentSection>
+<Divider sx={{ my: 2 }} />
 
       {/* -------------------------------- */}
       {/* Supported Properties */}
       {/* -------------------------------- */}
 
-      <ContentSection
-        id="supported-properties"
-        title="Supported Properties"
-      >
-        <PropsSection props={checkboxGroupProps} />
-      </ContentSection>
+        <PropsSection data={checkboxGroupProps} />
+<Divider sx={{ my: 2 }} />
 
       {/* -------------------------------- */}
       {/* Related Documentation */}

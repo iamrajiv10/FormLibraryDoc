@@ -6,7 +6,8 @@ export const basicExampleSnippet = `const formData = [
   }
 ];`;
 
-export const basicExampleFullCode = `import { Form } from "formLibrary";
+export const basicExampleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -60,7 +61,6 @@ export const valueSnippet = `{
   label: "Email Address",
   name: "email",
   type: "email",
-  value: "john@example.com"
 }`;
 
 export const valueFullCode = `const formData = [
@@ -68,7 +68,6 @@ export const valueFullCode = `const formData = [
     label: "Email Address",
     name: "email",
     type: "email",
-    value: "john@example.com"
   }
 ];`;
 
@@ -76,7 +75,6 @@ export const disabledSnippet = `{
   label: "Email Address",
   name: "email",
   type: "email",
-  value: "john@example.com",
   disabled: true
 }`;
 
@@ -85,7 +83,6 @@ export const disabledFullCode = `const formData = [
     label: "Email Address",
     name: "email",
     type: "email",
-    value: "john@example.com",
     disabled: true
   }
 ];`;
@@ -254,8 +251,6 @@ export const fullExampleSnippet = `const formData = [
 
     errorMessage: "Please enter your email address.",
 
-    value: "john@example.com",
-
     style: {
       borderRadius: "8px"
     },
@@ -271,7 +266,8 @@ export const fullExampleSnippet = `const formData = [
   }
 ];`;
 
-export const fullExampleFullCode = `import { Form } from "formLibrary";
+export const fullExampleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -283,8 +279,6 @@ function Example() {
       required: true,
 
       errorMessage: "Please enter your email address.",
-
-      value: "john@example.com",
 
       style: {
         borderRadius: "8px"

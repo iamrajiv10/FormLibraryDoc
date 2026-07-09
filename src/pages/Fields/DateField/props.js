@@ -1,38 +1,57 @@
-export const dateFieldProps = [
+export const propsData = [
   {
-    name: 'required',
-    type: 'boolean',
-    required: false,
-    description: 'Marks the date field as mandatory.'
-  },
-  {
-    name: 'errorMessage',
+    property: 'label',
     type: 'string',
-    required: false,
-    description: 'Custom validation message displayed when validation fails.'
+    required: 'Yes',
+    description: 'Field label'
   },
   {
-    name: 'disabled',
+    property: 'name',
+    type: 'string',
+    required: 'Yes',
+    description: 'Unique field identifier'
+  },
+  {
+    property: 'type',
+    type: 'string',
+    required: 'Yes',
+    description: 'Must be "date"'
+  },
+  {
+    property: 'required',
     type: 'boolean',
-    required: false,
-    description: 'Disables user interaction with the field.'
+    required: 'No',
+    description: 'Enables validation'
   },
   {
-    name: 'grid',
-    type: 'object',
-    required: false,
-    description: 'Controls responsive layout behavior.'
+    property: 'errorMessage',
+    type: 'string',
+    required: 'No',
+    description: 'Custom validation message'
   },
   {
-    name: 'style',
-    type: 'object',
-    required: false,
-    description: 'Applies custom styling to the field.'
+    property: 'disabled',
+    type: 'boolean',
+    required: 'No',
+    description: 'Disables field'
   },
   {
-    name: 'labelStyle',
+    property: 'grid',
     type: 'object',
-    required: false,
-    description: 'Applies custom styling to the field label.'
+    required: 'No',
+    description: 'Responsive layout'
+  },
+  {
+    property: 'style',
+    type: 'object',
+    required: 'No',
+    description: 'Field styling'
+  },
+  {
+    property: 'labelStyle',
+    type: 'object',
+    required: 'No',
+    description: 'Label styling'
   }
 ];
+

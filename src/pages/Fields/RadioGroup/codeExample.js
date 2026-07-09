@@ -10,7 +10,8 @@ export const radioBasicSnippet = `const formData = [
   }
 ];`;
 
-export const radioBasicFullCode = `import { Form } from "formLibrary";
+export const radioBasicFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -42,7 +43,8 @@ export const radioOptionsSnippet = `{
   ]
 }`;
 
-export const radioOptionsFullCode = `import { Form } from "formLibrary";
+export const radioOptionsFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -76,7 +78,8 @@ export const radioRequiredSnippet = `{
   required: true
 }`;
 
-export const radioRequiredFullCode = `import { Form } from "formLibrary";
+export const radioRequiredFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -112,7 +115,8 @@ export const radioErrorMessageSnippet = `{
   errorMessage: "Please select an option."
 }`;
 
-export const radioErrorMessageFullCode = `import { Form } from "formLibrary";
+export const radioErrorMessageFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -147,7 +151,8 @@ export const radioDisabledSnippet = `{
   disabled: true
 }`;
 
-export const radioDisabledFullCode = `import { Form } from "formLibrary";
+export const radioDisabledFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -185,7 +190,8 @@ export const radioGridSnippet = `{
   }
 }`;
 
-export const radioGridFullCode = `import { Form } from "formLibrary";
+export const radioGridFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -225,7 +231,8 @@ export const radioStyleSnippet = `{
   }
 }`;
 
-export const radioStyleFullCode = `import { Form } from "formLibrary";
+export const radioStyleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -264,7 +271,8 @@ export const radioLabelStyleSnippet = `{
   }
 }`;
 
-export const radioLabelStyleFullCode = `import { Form } from "formLibrary";
+export const radioLabelStyleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -318,7 +326,8 @@ export const radioFullExampleSnippet = `const formData = [
   }
 ];`;
 
-export const radioFullExampleFullCode = `import { Form } from "formLibrary";
+export const radioFullExampleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [

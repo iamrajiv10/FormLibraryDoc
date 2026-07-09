@@ -52,7 +52,7 @@ import {
   formLibraryApproachSnippet,
   formLibraryApproachFullCode
 } from './codeExample';
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
 
 
 const QuickStart = () => {

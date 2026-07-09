@@ -4,7 +4,8 @@ import {
   Typography
 } from '@mui/material';
 
-import { Form } from 'formLibrary';
+import { Form } from 'skemvora';
+
 
 import LivePreview from '../../../components/LivePreview/LivePreview';
 import CodeBlock from '../../../components/CodeBlock/CodeBlock';

@@ -32,30 +32,6 @@ export const validationContent = {
     'Email Fields support the same validation system used throughout Form Library.'
 };
 
-export const commonUseCasesContent = {
-  title: 'Common Use Cases',
-  authentication: [
-    'Email Address',
-    'Login Email',
-    'Account Email'
-  ],
-  registration: [
-    'Primary Email',
-    'Personal Email',
-    'Work Email'
-  ],
-  contactForms: [
-    'Contact Email',
-    'Support Email',
-    'Business Email'
-  ],
-  userManagement: [
-    'Employee Email',
-    'Manager Email',
-    'Student Email'
-  ]
-};
-
 export const fullExampleContent = {
   title: 'Full Example',
   description:

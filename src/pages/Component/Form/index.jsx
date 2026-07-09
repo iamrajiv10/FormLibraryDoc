@@ -83,7 +83,10 @@ import {
   fieldPropertiesData,
   fieldTypesData
 } from './props';
-import { Form } from 'formLibrary';
+// import { Form } from 'skemvora';
+
+import { Form } from 'skemvora';
+
 
 const FormPage = () => {
   return (

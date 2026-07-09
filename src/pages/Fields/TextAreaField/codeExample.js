@@ -6,7 +6,8 @@ export const basicSnippet = `const formData = [
   }
 ];`;
 
-export const basicFullCode = `import { Form } from 'formLibrary';
+export const basicFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -29,7 +30,8 @@ export const requiredSnippet = `{
   required: true
 }`;
 
-export const requiredFullCode = `import { Form } from 'formLibrary';
+export const requiredFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -54,7 +56,8 @@ export const errorMessageSnippet = `{
   errorMessage: "Please enter a description."
 }`;
 
-export const errorMessageFullCode = `import { Form } from 'formLibrary';
+export const errorMessageFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -79,7 +82,8 @@ export const disabledSnippet = `{
   disabled: true
 }`;
 
-export const disabledFullCode = `import { Form } from 'formLibrary';
+export const disabledFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -107,7 +111,8 @@ export const styleSnippet = `{
   }
 }`;
 
-export const styleFullCode = `import { Form } from 'formLibrary';
+export const styleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -139,7 +144,8 @@ export const labelStyleSnippet = `{
   }
 }`;
 
-export const labelStyleFullCode = `import { Form } from 'formLibrary';
+export const labelStyleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -185,7 +191,8 @@ export const fullExampleSnippet = `const formData = [
   }
 ];`;
 
-export const fullExampleFullCode = `import { Form } from 'formLibrary';
+export const fullExampleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [

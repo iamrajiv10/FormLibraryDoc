@@ -1,5 +1,5 @@
-import { Box, Typography } from '@mui/material';
-import { Form } from 'formLibrary';
+import { Box, Divider, Typography } from '@mui/material';
+import { Form } from 'skemvora';
 
 import {
   PageHeader,
@@ -24,12 +24,15 @@ import {
   basicExampleData,
   requiredExampleData,
   errorMessageExampleData,
-  valueExampleData,
   disabledExampleData,
   gridExampleData,
   styleExampleData,
   labelStyleExampleData,
-  fullExampleData
+  fullExampleData,
+  prefixExampleData,
+  suffixExampleData,
+  maxDigitExampleData,
+  precisionExampleData
 } from './example';
 
 import {
@@ -39,8 +42,6 @@ import {
   requiredFullCode,
   errorMessageSnippet,
   errorMessageFullCode,
-  valueSnippet,
-  valueFullCode,
   disabledSnippet,
   disabledFullCode,
   gridSnippet,
@@ -54,7 +55,15 @@ import {
   validationSnippet,
   validationMessageSnippet,
   fullExampleSnippet,
-  fullExampleCode
+  fullExampleCode,
+  prefixSnippet,
+  prefixFullCode,
+  suffixSnippet,
+  suffixFullCode,
+  maxDigitSnippet,
+  maxDigitFullCode,
+  precisionSnippet,
+  precisionFullCode
 } from './codeExample';
 
 import { propsData } from './props';
@@ -69,6 +78,7 @@ function NumberField() {
         description={overviewContent.description}
         details={overviewContent.details}
       />
+            <Divider sx={{ my: 2 }} />
 
       <ContentSection
         id="basic-example"
@@ -84,7 +94,7 @@ function NumberField() {
               color: 'primary.main'
             }}
           >
-            "password"
+            "number"
           </Typography>
           .
         </Typography>
@@ -107,6 +117,7 @@ function NumberField() {
           disabled states, and conditional rendering.
         </InfoCallout>
       </ContentSection>
+            <Divider sx={{ my: 2 }} />
 
       <ContentSection
         id="properties"
@@ -118,20 +129,10 @@ function NumberField() {
           previewData={requiredExampleData}
           snippet={requiredSnippet}
           fullCode={requiredFullCode}
+          note='Default validation message: This is a required field.'
         >
-          <Typography variant="body2" color="text.secondary">
-            Default validation message:
-          </Typography>
-
-          <Typography
-            sx={{
-              mt: 1,
-              fontFamily: 'monospace'
-            }}
-          >
-            This is a required field.
-          </Typography>
         </PropertyExample>
+            <Divider sx={{ my: 2 }} />
 
         <PropertyExample
           title="errorMessage"
@@ -139,44 +140,10 @@ function NumberField() {
           previewData={errorMessageExampleData}
           snippet={errorMessageSnippet}
           fullCode={errorMessageFullCode}
+          note='Example: Please enter you age.'
         >
-          <Typography variant="body2" color="text.secondary">
-            Example:
-          </Typography>
-
-          <Typography
-            sx={{
-              mt: 1,
-              fontFamily: 'monospace'
-            }}
-          >
-            Please enter your age.
-          </Typography>
         </PropertyExample>
-
-        <PropertyExample
-          title="value"
-          description="Provide an initial value for the field."
-          previewData={valueExampleData}
-          snippet={valueSnippet}
-          fullCode={valueFullCode}
-        >
-          <Typography
-            variant="subtitle2"
-            sx={{ mt: 3, mb: 1 }}
-          >
-            Common use cases
-          </Typography>
-
-          <BulletList
-            items={[
-              'Displaying existing data',
-              'Edit forms',
-              'Saved drafts',
-              'Profile management screens'
-            ]}
-          />
-        </PropertyExample>
+                    <Divider sx={{ my: 2 }} />
 
         <PropertyExample
           title="disabled"
@@ -185,20 +152,6 @@ function NumberField() {
           snippet={disabledSnippet}
           fullCode={disabledFullCode}
         >
-          <Typography
-            variant="subtitle2"
-            sx={{ mt: 3, mb: 1 }}
-          >
-            Common examples
-          </Typography>
-
-          <BulletList
-            items={[
-              'Employee records',
-              'Profile review screens',
-              'System generated values'
-            ]}
-          />
         </PropertyExample>
 
         <PropertyExample
@@ -208,9 +161,6 @@ function NumberField() {
           snippet={gridSnippet}
           fullCode={gridFullCode}
         >
-          <Typography >
-            Number Fields fully support Form Library's responsive grid system.
-          </Typography>
         </PropertyExample>
 
         <PropertyExample
@@ -228,7 +178,42 @@ function NumberField() {
           snippet={labelStyleSnippet}
           fullCode={labelStyleFullCode}
         />
+
+        <PropertyExample
+          title="prefix"
+          description="Adds a static value before the number input."
+          previewData={prefixExampleData}
+          snippet={prefixSnippet}
+          fullCode={prefixFullCode}
+        />
+
+        <PropertyExample
+          title="suffix"
+          description="Adds a static value after the number input."
+          previewData={suffixExampleData}
+          snippet={suffixSnippet}
+          fullCode={suffixFullCode}
+        />
+
+        <PropertyExample
+          title="maxDigits"
+          description="Defines the maximum number of digits allowed in the number field."
+          previewData={maxDigitExampleData}
+          snippet={maxDigitSnippet}
+          fullCode={maxDigitFullCode}
+          note={'The user can enter up to 10 digits only.'}
+        />
+
+        <PropertyExample
+          title="precision"
+          description="Controls the number of decimal places allowed in the value."
+          previewData={precisionExampleData}
+          snippet={precisionSnippet}
+          fullCode={precisionFullCode}
+          note={'Allowed: 100.25  . Use "0" if do not want decimal value.'}
+        />
       </ContentSection>
+            <Divider sx={{ my: 2 }} />
 
       <ContentSection
         id="styling"
@@ -248,10 +233,11 @@ function NumberField() {
           snippet={stylingLabelSnippet}
         />
 
-        <Typography sx={{ mt: 2 }}>
+        <InfoCallout>
           Field-level styles override global form styles.
-        </Typography>
+        </InfoCallout>
       </ContentSection>
+            <Divider sx={{ my: 2 }} />
 
       <ContentSection
         id="validation"
@@ -266,25 +252,24 @@ function NumberField() {
           snippet={validationSnippet}
         />
 
-        <Typography >
+        <InfoCallout >
           If the field is left empty during submission, validation automatically
           prevents form submission.
-        </Typography>
+        </InfoCallout>
+        <Box sx={{my:4}}></Box>
 
         <CodeSection
           title="Custom Validation Message"
           snippet={validationMessageSnippet}
         />
 
-        <Typography
-          sx={{
-            mt: 2,
-            fontFamily: 'monospace'
-          }}
+        <InfoCallout
         >
           Age is required.
-        </Typography>
+        </InfoCallout>
       </ContentSection>
+
+            <Divider sx={{ my: 2 }} />
 
       <ContentSection
         id="full-example"
@@ -307,12 +292,15 @@ function NumberField() {
           fullCode={fullExampleCode}
         />
       </ContentSection>
+            <Divider sx={{ my: 2 }} />
 
       <PropsSection
         id="supported-properties"
         title="Supported Properties"
         data={propsData}
       />
+                  <Divider sx={{ my: 2 }} />
+
 
       <ContentSection
         id="related-documentation"

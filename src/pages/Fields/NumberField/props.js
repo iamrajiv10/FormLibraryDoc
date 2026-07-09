@@ -30,16 +30,34 @@ export const propsData = [
     description: 'Custom validation message'
   },
   {
-    property: 'value',
-    type: 'number',
-    required: 'No',
-    description: 'Initial value'
-  },
-  {
     property: 'disabled',
     type: 'boolean',
     required: 'No',
     description: 'Disables editing'
+  },
+  {
+    property: 'prefix',
+    type: 'string',
+    required: 'No',
+    description: 'Displays content before number value'
+  },
+  {
+    property: 'suffix',
+    type: 'string',
+    required: 'No',
+    description: 'Displays content after number value'
+  },
+  {
+    property: 'maxDigits',
+    type: 'number',
+    required: 'No',
+    description: 'Limits maximum digits allowed'
+  },
+  {
+    property: 'precision',
+    type: 'number',
+    required: 'No',
+    description: 'controls decimal places'
   },
   {
     property: 'style',

@@ -6,7 +6,8 @@ export const basicSnippet = `const formData = [
   }
 ];`;
 
-export const basicFullCode = `import { Form } from "formLibrary";
+export const basicFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -29,7 +30,8 @@ export const requiredSnippet = `{
   required: true
 }`;
 
-export const requiredFullCode = `import { Form } from "formLibrary";
+export const requiredFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -54,7 +56,8 @@ export const errorMessageSnippet = `{
   errorMessage: "Please enter your password."
 }`;
 
-export const errorMessageFullCode = `import { Form } from "formLibrary";
+export const errorMessageFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -72,39 +75,16 @@ function Example() {
 
 export default Example;`;
 
-export const valueSnippet = `{
-  label: "Password",
-  name: "password",
-  type: "password",
-  value: "MySecurePassword"
-}`;
-
-export const valueFullCode = `import { Form } from "formLibrary";
-
-function Example() {
-  const formData = [
-    {
-      label: "Password",
-      name: "password",
-      type: "password",
-      value: "MySecurePassword"
-    }
-  ];
-
-  return <Form data={formData} />;
-}
-
-export default Example;`;
 
 export const disabledSnippet = `{
   label: "Password",
   name: "password",
   type: "password",
-  value: "MySecurePassword",
   disabled: true
 }`;
 
-export const disabledFullCode = `import { Form } from "formLibrary";
+export const disabledFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -112,7 +92,6 @@ function Example() {
       label: "Password",
       name: "password",
       type: "password",
-      value: "MySecurePassword",
       disabled: true
     }
   ];
@@ -133,7 +112,8 @@ export const gridSnippet = `{
   }
 }`;
 
-export const gridFullCode = `import { Form } from "formLibrary";
+export const gridFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -165,7 +145,8 @@ export const styleSnippet = `{
   }
 }`;
 
-export const styleFullCode = `import { Form } from "formLibrary";
+export const styleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -197,7 +178,8 @@ export const labelStyleSnippet = `{
   }
 }`;
 
-export const labelStyleFullCode = `import { Form } from "formLibrary";
+export const labelStyleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -226,7 +208,8 @@ export const validationSnippet = `{
   errorMessage: "Password is required."
 }`;
 
-export const validationFullCode = `import { Form } from "formLibrary";
+export const validationFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -254,8 +237,6 @@ export const fullExampleSnippet = `const formData = [
 
     errorMessage: "Please enter your password.",
 
-    value: "MySecurePassword",
-
     style: {
       borderRadius: "8px"
     },
@@ -271,7 +252,8 @@ export const fullExampleSnippet = `const formData = [
   }
 ];`;
 
-export const fullExampleFullCode = `import { Form } from "formLibrary";
+export const fullExampleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -283,8 +265,6 @@ function Example() {
       required: true,
 
       errorMessage: "Please enter your password.",
-
-      value: "MySecurePassword",
 
       style: {
         borderRadius: "8px"

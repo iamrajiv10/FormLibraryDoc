@@ -45,18 +45,20 @@ export const commonUseCases = [
   'Decision Making'
 ];
 
-export const relatedFields = [
-  'Checkbox Group',
-  'Select Field',
-  'Text Field',
-  'Email Field',
-  'Password Field'
-];
-
-export const advancedFeatures = [
-  'Conditional Rendering',
-  'Validation',
-  'Grid Layout',
-  'Disabled Fields',
-  'Field Styling'
-];
+export const relatedDocs = {
+  title: 'Related Documentation',
+  components: ['Form', 'ConditionalForm'],
+  fields: [
+    'Text Field',
+    'Email Field',
+    'Password Field',
+    'Number Field',
+    'Date Field'
+  ],
+  features: [
+    'Validation',
+    'Grid Layout',
+    'Disabled Fields',
+    'Field Styling'
+  ]
+};

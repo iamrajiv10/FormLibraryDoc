@@ -6,7 +6,8 @@ export const basicSnippet = `const formData = [
   }
 ];`;
 
-export const basicFullCode = `import { Form } from "formLibrary";
+export const basicFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -29,7 +30,8 @@ export const requiredSnippet = `{
   required: true
 }`;
 
-export const requiredFullCode = `import { Form } from "formLibrary";
+export const requiredFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -54,7 +56,8 @@ export const errorMessageSnippet = `{
   errorMessage: "Please enter your age."
 }`;
 
-export const errorMessageFullCode = `import { Form } from "formLibrary";
+export const errorMessageFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -72,39 +75,16 @@ function Example() {
 
 export default Example;`;
 
-export const valueSnippet = `{
-  label: "Age",
-  name: "age",
-  type: "number",
-  value: 25
-}`;
-
-export const valueFullCode = `import { Form } from "formLibrary";
-
-function Example() {
-  const formData = [
-    {
-      label: "Age",
-      name: "age",
-      type: "number",
-      value: 25
-    }
-  ];
-
-  return <Form data={formData} />;
-}
-
-export default Example;`;
 
 export const disabledSnippet = `{
   label: "Age",
   name: "age",
   type: "number",
-  value: 25,
   disabled: true
 }`;
 
-export const disabledFullCode = `import { Form } from "formLibrary";
+export const disabledFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -112,7 +92,6 @@ function Example() {
       label: "Age",
       name: "age",
       type: "number",
-      value: 25,
       disabled: true
     }
   ];
@@ -133,7 +112,8 @@ export const gridSnippet = `{
   }
 }`;
 
-export const gridFullCode = `import { Form } from "formLibrary";
+export const gridFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -165,7 +145,8 @@ export const styleSnippet = `{
   }
 }`;
 
-export const styleFullCode = `import { Form } from "formLibrary";
+export const styleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -197,7 +178,8 @@ export const labelStyleSnippet = `{
   }
 }`;
 
-export const labelStyleFullCode = `import { Form } from "formLibrary";
+export const labelStyleFullCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -217,6 +199,108 @@ function Example() {
 }
 
 export default Example;`;
+
+export const prefixSnippet = `{
+  label:"Price",
+  name:"price",
+  type:"number",
+  prefix:"₹"
+}`;
+
+export const prefixFullCode = `import { Form } from 'skemvora';
+
+
+function Example() {
+  const formData = [
+    {
+      label:"Price",
+      name:"price",
+      type:"number",
+      prefix:"₹"
+    }
+  ];
+
+  return <Form data={formData} />;
+}
+
+export default Example;`;
+
+
+export const suffixSnippet = `{
+  label:"Discount",
+  name:"discount",
+  type:"number",
+  suffix:"%"
+}`;
+
+export const suffixFullCode = `import { Form } from 'skemvora';
+
+
+function Example() {
+  const formData = [
+    {
+      label:"Discount",
+      name:"discount",
+      type:"number",
+      suffix:"%"
+    }
+  ];
+
+  return <Form data={formData} />;
+}
+
+export default Example;`;
+
+export const maxDigitSnippet = `{
+    label:"Account Number",
+    name:"accountNumber",
+    type:"number",
+    maxDigits:10
+}`;
+
+export const maxDigitFullCode = `import { Form } from 'skemvora';
+
+
+function Example() {
+  const formData = [
+    {
+      label:"Account Number",
+      name:"accountNumber",
+      type:"number",
+      maxDigits:10
+    }
+  ];
+
+  return <Form data={formData} />;
+}
+
+export default Example;`;
+
+export const precisionSnippet = `{
+    label:"Amount",
+    name:"amount",
+    type:"number",
+    precision:2
+}`;
+
+export const precisionFullCode = `import { Form } from 'skemvora';
+
+
+function Example() {
+  const formData = [
+    {
+      label:"Amount",
+      name:"amount",
+      type:"number",
+      precision:2
+    }
+  ];
+
+  return <Form data={formData} />;
+}
+
+export default Example;`;
+
 
 export const stylingFieldSnippet = `{
   label: "Age",
@@ -265,7 +349,7 @@ export const fullExampleSnippet = `const formData = [
 
     errorMessage: "Please enter your years of experience.",
 
-    value: 5,
+    maxDigits: 2
 
     style: {
       borderRadius: "8px"
@@ -282,7 +366,8 @@ export const fullExampleSnippet = `const formData = [
   }
 ];`;
 
-export const fullExampleCode = `import { Form } from "formLibrary";
+export const fullExampleCode = `import { Form } from 'skemvora';
+
 
 function Example() {
   const formData = [
@@ -295,8 +380,8 @@ function Example() {
 
       errorMessage: "Please enter your years of experience.",
 
-      value: 5,
-
+      maxDigits: 2
+      
       style: {
         borderRadius: "8px"
       },

@@ -1,5 +1,6 @@
-import { Box, Typography } from '@mui/material';
-import { Form } from 'formLibrary';
+import { Box, Divider, Typography } from '@mui/material';
+import { Form } from 'skemvora';
+
 
 import {
   PageHeader,
@@ -20,7 +21,6 @@ import {
   propertiesContent,
   stylingContent,
   validationContent,
-  commonUseCasesContent,
   fullExampleContent,
   relatedDocsContent,
   nextStepContent
@@ -28,7 +28,6 @@ import {
 
 import {
   example1Data,
-  example4Data,
   example5Data,
   example9Data
 } from './example';
@@ -88,6 +87,7 @@ const EmailFieldPage = () => {
       <InfoCallout sx={{ mb: 5 }}>
         {overviewContent.conclusion}
       </InfoCallout>
+            <Divider sx={{ my: 2 }} />
 
       {/* ==========================================
           BASIC EXAMPLE
@@ -116,6 +116,7 @@ const EmailFieldPage = () => {
           </InfoCallout>
         </Box>
       </ContentSection>
+            <Divider sx={{ my: 2 }} />
 
       {/* ==========================================
           PROPERTIES
@@ -157,41 +158,6 @@ const EmailFieldPage = () => {
         />
 
         <Typography variant="h5" sx={{ fontWeight: 600, mt: 5, mb: 2 }}>
-          value
-        </Typography>
-
-        <ContentBlock>
-          Provide an initial value for the field.
-        </ContentBlock>
-
-        <LivePreview>
-          <Box sx={{ width: '100%', maxWidth: 400 }}>
-            <Form data={example4Data} />
-          </Box>
-        </LivePreview>
-
-        <CodeBlock
-          language="jsx"
-          snippet={valueSnippet}
-          fullCode={valueFullCode}
-        />
-
-        <Box sx={{ mt: 3 }}>
-          <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 2 }}>
-            Common use cases
-          </Typography>
-
-          <BulletList
-            items={[
-              'Edit Profile Forms',
-              'Account Settings',
-              'Saved Drafts',
-              'Review Screens'
-            ]}
-          />
-        </Box>
-
-        <Typography variant="h5" sx={{ fontWeight: 600, mt: 5, mb: 2 }}>
           disabled
         </Typography>
 
@@ -210,20 +176,6 @@ const EmailFieldPage = () => {
           snippet={disabledSnippet}
           fullCode={disabledFullCode}
         />
-
-        <Box sx={{ mt: 3 }}>
-          <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 2 }}>
-            Common examples
-          </Typography>
-
-          <BulletList
-            items={[
-              'Employee Management Systems',
-              'User Profile Pages',
-              'Customer Portals'
-            ]}
-          />
-        </Box>
 
         <Typography variant="h5" sx={{ fontWeight: 600, mt: 5, mb: 2 }}>
           grid
@@ -279,6 +231,7 @@ const EmailFieldPage = () => {
           This allows labels to match branding or design requirements.
         </InfoCallout>
       </ContentSection>
+            <Divider sx={{ my: 2 }} />
 
             {/* ==========================================
           STYLING
@@ -322,6 +275,7 @@ const EmailFieldPage = () => {
           </InfoCallout>
         </Box>
       </ContentSection>
+            <Divider sx={{ my: 2 }} />
 
       {/* ==========================================
           VALIDATION
@@ -372,54 +326,8 @@ const EmailFieldPage = () => {
           </InfoCallout>
         </Box>
       </ContentSection>
-
-      {/* ==========================================
-          COMMON USE CASES
-      ========================================== */}
-
-      <ContentSection
-        id="common-use-cases"
-        title={commonUseCasesContent.title}
-      >
-        <Typography variant="h5" sx={{ fontWeight: 600, mb: 2 }}>
-          Authentication
-        </Typography>
-
-        <BulletList
-          items={commonUseCasesContent.authentication}
-        />
-
-        <Box sx={{ mt: 4 }}>
-          <Typography variant="h5" sx={{ fontWeight: 600, mb: 2 }}>
-            Registration Forms
-          </Typography>
-
-          <BulletList
-            items={commonUseCasesContent.registration}
-          />
-        </Box>
-
-        <Box sx={{ mt: 4 }}>
-          <Typography variant="h5" sx={{ fontWeight: 600, mb: 2 }}>
-            Contact Forms
-          </Typography>
-
-          <BulletList
-            items={commonUseCasesContent.contactForms}
-          />
-        </Box>
-
-        <Box sx={{ mt: 4 }}>
-          <Typography variant="h5" sx={{ fontWeight: 600, mb: 2 }}>
-            User Management Systems
-          </Typography>
-
-          <BulletList
-            items={commonUseCasesContent.userManagement}
-          />
-        </Box>
-      </ContentSection>
-
+            <Divider sx={{ my: 2 }} />
+      
       {/* ==========================================
           FULL EXAMPLE
       ========================================== */}
@@ -446,6 +354,7 @@ const EmailFieldPage = () => {
           </InfoCallout>
         </Box>
       </ContentSection>
+            <Divider sx={{ my: 2 }} />
 
       {/* ==========================================
           SUPPORTED PROPERTIES
@@ -457,6 +366,7 @@ const EmailFieldPage = () => {
       >
         <PropsTable data={propsData} />
       </ContentSection>
+            <Divider sx={{ my: 2 }} />
 
       {/* ==========================================
           RELATED DOCUMENTATION
