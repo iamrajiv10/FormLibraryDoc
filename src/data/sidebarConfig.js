@@ -21,16 +21,15 @@ export const sidebarConfig = [
       { label: 'Email Field', path: '/fields/email-field' },
       { label: 'Password Field', path: '/fields/password-field' },
       { label: 'Number Field', path: '/fields/number-field' },
-      { label: 'MultiSelect', path: '/fields/multiselect' },
-      { label: 'Content Field', path: '/fields/content-field' },
-
-
+      
       { label: 'Date Field', path: '/fields/date-field' },
       { label: 'TextArea Field', path: '/fields/textarea-field' },
       { label: 'Radio Gruop Field', path: '/fields/radiogroup-field' },
       { label: 'Checkbox Field', path: '/fields/checkbox-field' },
       { label: 'CheckBox Group Field', path: '/fields/checkboxgroup-field' },
       { label: 'Select Field', path: '/fields/select-field' },
+      { label: 'MultiSelect', path: '/fields/multiselect' },
+      { label: 'Content Field', path: '/fields/content-field' },
     ],
   },
   {

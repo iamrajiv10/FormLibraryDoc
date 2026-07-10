@@ -13,6 +13,9 @@ export const basicButtonsSnippet = `
       type: "submit"
     }
   ]}
+  buttonContainerStyle={{ 
+    display: "flex", gap: "12px", justifyContent: "space-between", marginTop: "12px" 
+  }}
 />
 `;
 

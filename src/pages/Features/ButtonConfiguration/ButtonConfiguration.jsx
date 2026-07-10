@@ -74,6 +74,7 @@ const ButtonConfigurationPage = () => {
                                     type: 'submit'
                                 }
                             ]}
+                            buttonContainerStyle={{ display: "flex", gap: "12px", justifyContent: "center", marginTop: "12px" }}
                         />
                     </Box>
                 </LivePreviewComponent>

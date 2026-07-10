@@ -28,6 +28,9 @@ export default function ButtonConfigurationExample() {
           type: 'submit'
         }
       ]}
+      buttonContainerStyle={{ 
+        display: "flex", gap: "12px", justifyContent: "space-between", marginTop: "12px" 
+      }}
     />
   );
 }
@@ -106,7 +109,7 @@ export const buttonConfigurationPropsData = [
     description: 'Button styling'
   },
   {
-    property: 'buttonsStyle',
+    property: 'buttonContainerStyle',
     type: 'object',
     required: 'No',
     description: 'Button layout styling (alignment/spacing)'
