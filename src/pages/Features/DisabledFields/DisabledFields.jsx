@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Divider, Typography } from '@mui/material';
 
-import { ConditionalForm, Form } from 'formLibrary';
+import { ConditionalForm, Form } from 'skemvora';
 
 import {
   BulletList,
