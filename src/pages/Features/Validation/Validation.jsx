@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Divider, Typography } from '@mui/material';
-import { Form, ConditionalForm } from 'formLibrary';
+import { Form, ConditionalForm } from 'skemvora';
 
 import {
   PageHeader,
