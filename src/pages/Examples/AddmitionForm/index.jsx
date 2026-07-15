@@ -4,7 +4,7 @@ import { ConditionalForm, Form } from 'skemvora';
 
 import LivePreview from '../../../components/LivePreview/LivePreview';
 import CodeBlockComponent from '../../../components/CodeBlock/CodeBlock'
-import { universityAdmissionForm } from './fullCode';
+import { universityAdmissionForm } from './fullcode';
 import { universityAdmissionFormFullSnippet, universityAdmissionFormsnippet } from './codeSnippet';
 
 const AddmitionFormPage = () => {
