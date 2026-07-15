@@ -24,7 +24,6 @@ import DisabledFieldsDoc from '../pages/Features/DisabledFields/DisabledFields';
 import RegistrationFormDoc from '../pages/Examples/RegistrationForm';
 
 
-import EducationFormDoc from '../pages/Examples/EducationForm';
 import QuickStart from '../pages/GettingStarted/QuickStart';
 import TixtFieldPage from '../pages/Fields/TaxtField';
 import EmailFieldPage from '../pages/Fields/EmailField';
@@ -48,6 +47,8 @@ import FormStylingPage from '../pages/Features/FormStyling/FormStyling';
 import ButtonConfigurationPage from '../pages/Features/ButtonConfiguration/ButtonConfiguration';
 import ResponsiveLayoutDoc from '../pages/Features/ResponsiveLayout/ResponsiveLayout';
 import DateFieldPage from '../pages/Fields/DateField/DateField';
+import RegistrationFormPage from '../pages/Examples/RegistrationForm/index';
+import AddmitionFormPage from '../pages/Examples/AddmitionForm/index';
 
 
 const AppRoutes = ({ toggleTheme, mode }) => {
@@ -97,8 +98,8 @@ const AppRoutes = ({ toggleTheme, mode }) => {
         
         {/* Examples */}
 
-        <Route path="examples/registration-form" element={<RegistrationFormDoc />} />
-        <Route path="examples/education-form" element={<EducationFormDoc />} />
+        <Route path="examples/registration-form" element={<RegistrationFormPage />} />
+        <Route path="examples/education-form" element={<AddmitionFormPage />} />
       </Route>
     </Routes>
   );
