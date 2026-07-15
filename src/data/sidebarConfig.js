@@ -47,8 +47,6 @@ export const sidebarConfig = [
     ],
   },
 
-
-
   {
     title: 'Examples',
     items: [
